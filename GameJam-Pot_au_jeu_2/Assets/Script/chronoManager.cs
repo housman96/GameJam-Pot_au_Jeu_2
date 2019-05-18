@@ -14,5 +14,10 @@ public class chronoManager : MonoBehaviour
     private void Update()
     {
         slider.value += Time.deltaTime/timeDivider;
+
+        if(slider.value == 24)
+        {
+            slider.value = 0;
+        }
     }
 }
