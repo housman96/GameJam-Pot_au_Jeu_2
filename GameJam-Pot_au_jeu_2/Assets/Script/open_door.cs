@@ -5,13 +5,16 @@ using UnityEngine;
 public class open_door : MonoBehaviour
 {
     // Start is called before the first frame update
-    private Collider m_Collider;
+    private Collider m_BoxCollider;
     private Renderer m_Renderer;
 
     void Start()
     {
-        m_Collider = GetComponent<Collider>();
-        m_Collider.enabled = true;
+        m_BoxCollider = GetComponent<BoxCollider>();
+        m_BoxCollider.enabled = true;
+        m_BoxCollider.isTrigger = false;
+        // m_SphereCollider = GetComponent<SphereCollider>();
+        // m_SphereCollider.isTrigger = false;
         m_Renderer = GetComponent<Renderer>();
         m_Renderer.enabled = true;
     }
@@ -19,14 +22,14 @@ public class open_door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && m_BoxCollider.isTrigger == true)
         {
             //Toggle the Collider on and off when pressing the space bar
-            m_Collider.enabled = false;
+            //m_BoxCollider.enabled = false;
             m_Renderer.enabled = false;
 
             //Output to console whether the Collider is on or not
-            Debug.Log("Collider.enabled = " + m_Collider.enabled);
+            //Debug.Log("Collider.enabled = " + m_BoxCollider.enabled);
             Debug.Log("Renderer.enabled = " + m_Renderer.enabled);
         }
 
