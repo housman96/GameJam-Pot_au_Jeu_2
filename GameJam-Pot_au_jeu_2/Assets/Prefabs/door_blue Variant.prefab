@@ -22,7 +22,7 @@ PrefabInstance:
     - target: {fileID: 8149188939396055052, guid: d50fa04ca829b454687019ca5ce43a32,
         type: 3}
       propertyPath: m_Name
-      value: door_blue
+      value: door_blue Variant
       objectReference: {fileID: 0}
     - target: {fileID: -2958653277883924850, guid: d50fa04ca829b454687019ca5ce43a32,
         type: 3}
@@ -54,6 +54,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FlipX
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2958653277883924850, guid: d50fa04ca829b454687019ca5ce43a32,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -3627346732136907998, guid: d50fa04ca829b454687019ca5ce43a32,
         type: 3}
@@ -133,12 +138,12 @@ PrefabInstance:
     - target: {fileID: 3473682249256616580, guid: d50fa04ca829b454687019ca5ce43a32,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3473682249256616580, guid: d50fa04ca829b454687019ca5ce43a32,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 3.19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d50fa04ca829b454687019ca5ce43a32, type: 3}
