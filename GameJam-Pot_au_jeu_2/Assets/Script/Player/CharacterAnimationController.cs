@@ -106,10 +106,12 @@ public class CharacterAnimationController : MonoBehaviour
                     }
 
                     //movement
-
-                    animator.SetBool("isMoving", isMoving);
-                    animator.SetFloat("XSpeed", input.x);
-                    animator.SetFloat("YSpeed", input.y);
+                    if (!animator.GetBool("sword"))
+                    {
+                        animator.SetBool("isMoving", isMoving);
+                        animator.SetFloat("XSpeed", input.x);
+                        animator.SetFloat("YSpeed", input.y);
+                    }
 
                     //si on est dans une animation d'attaque on désactive le boolean qui declenche l'animation d'attaque
                     if (animator.GetCurrentAnimatorStateInfo(0).IsTag("handsUp"))
@@ -123,6 +125,8 @@ public class CharacterAnimationController : MonoBehaviour
                     if (animator.GetCurrentAnimatorStateInfo(0).IsTag("sword"))
                     {
                         animator.SetBool("sword", false);
+                        animator.SetFloat("XSpeed", input.x);
+                        animator.SetFloat("YSpeed", input.y);
                     }
                     if (animator.GetCurrentAnimatorStateInfo(0).IsTag("bow"))
                     {
@@ -181,8 +185,39 @@ public class CharacterAnimationController : MonoBehaviour
             if (animator.runtimeAnimatorController != null)
             {
                 animator.SetBool("sword", true);
-                animator.SetFloat("XSpeed", Xspeed);
-                animator.SetFloat("YSpeed", Yspeed);
+                if (Mathf.Abs(Xspeed) > 0.1f || Mathf.Abs(Yspeed) > 0.01f)
+                {
+                    animator.SetFloat("XSpeed", Xspeed);
+                    animator.SetFloat("YSpeed", Yspeed);
+                }
+                else
+                {
+
+                    if (sens == Sens.Down)
+                    {
+                        Debug.Log("test1");
+                        animator.SetFloat("XSpeed", 0);
+                        animator.SetFloat("YSpeed", -1f);
+                    }
+                    if (sens == Sens.Up)
+                    {
+                        Debug.Log("test2");
+                        animator.SetFloat("XSpeed", 0);
+                        animator.SetFloat("YSpeed", 1f);
+                    }
+                    if (sens == Sens.Left)
+                    {
+                        Debug.Log("test3");
+                        animator.SetFloat("XSpeed", -1f);
+                        animator.SetFloat("YSpeed", 0);
+                    }
+                    if (sens == Sens.Right)
+                    {
+                        Debug.Log("test4");
+                        animator.SetFloat("XSpeed", 1f);
+                        animator.SetFloat("YSpeed", 0);
+                    }
+                }
             }
         }
     }

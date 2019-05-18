@@ -34,10 +34,7 @@ public class CharacterInputController : MonoBehaviour
 
         float lastUpdateDeltaTime = (Time.time - lastTime);
 
-//        if (Input.GetButton("e"))
-  //      {
-           // animationController.sword(1, 1);
-    //    }
+
 
 
         //si on est dans une animation
@@ -108,6 +105,11 @@ public class CharacterInputController : MonoBehaviour
                 //on récupére les inputs
                 input.x = Input.GetAxis("Horizontal");
                 input.y = Input.GetAxis("Vertical");
+
+                if (Input.GetButton("Action"))
+                {
+                    animationController.sword(input.x, input.y);
+                }
 
                 Vector2 translation = new Vector3(input.x * lastUpdateDeltaTime * speed, input.y * lastUpdateDeltaTime * speed);
 
