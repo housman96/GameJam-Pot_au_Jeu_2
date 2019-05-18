@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5429469c2ef66b947af144bdd361c8e3, type: 3}
+  m_Name: Personnage2
+  m_EditorClassIdentifier: 
+  name: Player2
+  body: {fileID: 4488399730753317293, guid: 73037ec737b5be84e86170b8925077df, type: 3}
+  eyes: {fileID: 3849691748202187610, guid: b6dc2f31ce9493d468386bbd827218cf, type: 3}
+  chest: {fileID: 5170159533452863984, guid: 5996094e6e5dc06478073de3b1f3736d, type: 3}
+  arms: {fileID: 0}
+  pant: {fileID: 8308187330248861984, guid: 08ed8597cabc3bf4ea77555cf0b7a19d, type: 3}
+  shoes: {fileID: 4993357625577489075, guid: 90c42d3f053fbbf4fb77500ed7b03ac6, type: 3}
+  hands: {fileID: 0}
+  hair: {fileID: 6382019339291899906, guid: 275c61b2bff7ea24d99ec59e9d3b14a1, type: 3}
+  weapon: {fileID: 0}
+  hat: {fileID: 0}
+  nose: {fileID: 0}
