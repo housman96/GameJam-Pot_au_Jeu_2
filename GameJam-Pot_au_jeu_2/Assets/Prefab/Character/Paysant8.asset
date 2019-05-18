@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5429469c2ef66b947af144bdd361c8e3, type: 3}
+  m_Name: Paysant8
+  m_EditorClassIdentifier: 
+  name: 
+  body: {fileID: 3348608140683829142, guid: 4f9ad7a7ccd32cd42a43733c8a383350, type: 3}
+  eyes: {fileID: 8504046460048427692, guid: 528113612cbaf3740b72c15ce3723703, type: 3}
+  chest: {fileID: 7124769245698018286, guid: 697497fa8efe69c4c8c54916380c9587, type: 3}
+  arms: {fileID: 4724749766469490786, guid: 6ffd59505a6bfa54e8ce38e2f2e8fa57, type: 3}
+  pant: {fileID: 1728340669577227982, guid: cdf00f66ff70a3d4b84fce14ba5b6be5, type: 3}
+  shoes: {fileID: 217334569244646136, guid: a42bec4192d2ee64aaae0d706e2293a4, type: 3}
+  hands: {fileID: 0}
+  hair: {fileID: 3730582553946390610, guid: 772411014ecda704981edd8d36d90f5e, type: 3}
+  weapon: {fileID: 0}
+  hat: {fileID: 0}
+  nose: {fileID: 8410691023729646238, guid: 1334e7dda0bb6f14cabedd2039c04f20, type: 3}

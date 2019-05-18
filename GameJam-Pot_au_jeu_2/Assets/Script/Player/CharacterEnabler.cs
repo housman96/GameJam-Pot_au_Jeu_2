@@ -22,7 +22,7 @@ public class CharacterEnabler : MonoBehaviour
     public GameObject nose;
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         name = character.name;
         gameObject.name = name;
@@ -134,7 +134,7 @@ public class CharacterEnabler : MonoBehaviour
         pant.GetComponent<SpriteRenderer>().sortingOrder = 1;
         shoes.GetComponent<SpriteRenderer>().sortingOrder = 1;
         hands.GetComponent<SpriteRenderer>().sortingOrder = 1;
-        hair.GetComponent<SpriteRenderer>().sortingOrder = 1;
+        hair.GetComponent<SpriteRenderer>().sortingOrder = 3;
         weapon.GetComponent<SpriteRenderer>().sortingOrder = 3;
         hat.GetComponent<SpriteRenderer>().sortingOrder = 4;
         nose.GetComponent<SpriteRenderer>().sortingOrder = 1;
