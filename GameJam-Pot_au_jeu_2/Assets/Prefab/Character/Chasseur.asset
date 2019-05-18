@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5429469c2ef66b947af144bdd361c8e3, type: 3}
+  m_Name: Chasseur
+  m_EditorClassIdentifier: 
+  name: 
+  body: {fileID: 3348608140683829142, guid: 4f9ad7a7ccd32cd42a43733c8a383350, type: 3}
+  eyes: {fileID: 0}
+  chest: {fileID: 5542546640809938728, guid: 071b8394a2dafdb41b2b7610bda33ae9, type: 3}
+  arms: {fileID: 5534222268648134816, guid: df35853aac449e845855f1aba6c21947, type: 3}
+  pant: {fileID: 3522590826943281632, guid: 69519a3e9ae1ae4489353055df93e985, type: 3}
+  shoes: {fileID: 7216765763547882946, guid: 9dbe689d48818e444bb589ca72f32ad2, type: 3}
+  hands: {fileID: 7528517412013593503, guid: dbc71686ee8879040bb02bb721946ba9, type: 3}
+  hair: {fileID: 3264880082583991705, guid: bbb4e32a33a38ab44b8da6b0d8612609, type: 3}
+  weapon: {fileID: 7420630469800794283, guid: 2ebc9441e91508842a901c8513f4358b, type: 3}
+  hat: {fileID: 7569360367793605392, guid: 2d8f7753e7d7ab64f856a58ba99e4515, type: 3}
+  nose: {fileID: 1702315248726331666, guid: 72767cf1427d8b647965dec696beadbe, type: 3}
