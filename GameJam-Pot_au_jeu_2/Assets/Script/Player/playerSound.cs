@@ -37,7 +37,7 @@ public class playerSound : MonoBehaviour
 
     public void swordSound()
     {
-        if (swordClip.Length > 0)
+        if (swordClip.Length > 0 && !source.isPlaying)
         {
             source.Stop();
             int clipIndex = Random.Range(0, swordClip.Length);

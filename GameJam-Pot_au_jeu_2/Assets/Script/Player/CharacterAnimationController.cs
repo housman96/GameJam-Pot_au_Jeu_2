@@ -195,25 +195,21 @@ public class CharacterAnimationController : MonoBehaviour
 
                     if (sens == Sens.Down)
                     {
-                        Debug.Log("test1");
                         animator.SetFloat("XSpeed", 0);
                         animator.SetFloat("YSpeed", -1f);
                     }
                     if (sens == Sens.Up)
                     {
-                        Debug.Log("test2");
                         animator.SetFloat("XSpeed", 0);
                         animator.SetFloat("YSpeed", 1f);
                     }
                     if (sens == Sens.Left)
                     {
-                        Debug.Log("test3");
                         animator.SetFloat("XSpeed", -1f);
                         animator.SetFloat("YSpeed", 0);
                     }
                     if (sens == Sens.Right)
                     {
-                        Debug.Log("test4");
                         animator.SetFloat("XSpeed", 1f);
                         animator.SetFloat("YSpeed", 0);
                     }
