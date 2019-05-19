@@ -17,6 +17,7 @@ public class NPCInitializer : MonoBehaviour
 			houses.RemoveAt(randomIndex);
 
 			villager.GetComponent<Villager>().house = randHouse.GetComponent<House>();
+            randHouse.GetComponent<House>().villager = villager.GetComponent<Villager>();
 		}
     }
 
