@@ -26,6 +26,8 @@ public class Villager : MonoBehaviour
 	
 	public void Print()
 	{
+		Debug.Log("=================");
+		Debug.Log(villagerName);
 		Debug.Log(villagerToTalk1.villagerName + " => " + villagerToTalk1.house.size);
 		Debug.Log(villagerToTalk2.villagerName + " => " + villagerToTalk2.house.door);
 		Debug.Log(villagerToTalk3.villagerName + " => " + villagerToTalk3.house.deco);
