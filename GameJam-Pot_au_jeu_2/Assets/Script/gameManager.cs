@@ -29,6 +29,10 @@ public class gameManager : MonoBehaviour
 
     public GameObject deadVillager;
 
+    public GameObject panelP1;
+    public GameObject panelP2;
+
+
     public AudioClip yellingWolvesClip;
     public AudioClip morningClip;
 
@@ -66,9 +70,22 @@ public class gameManager : MonoBehaviour
             targets.Add(villagerList[randIndex2]);
             targets.Add(villagerList[randIndex3]);
 
-            playersTargets.Add(player, targets);
-            targets = new List<GameObject>();
 
+            playersTargets.Add(player, targets);
+
+
+
+
+            if (player.tag == "Player1")
+            {
+                panelP1.GetComponent<AfficheCible>().SetLesCiblesVisu(playersTargets[player][0], playersTargets[player][1], playersTargets[player][2]);
+            }
+            else if (player.tag == "Player2")
+            {
+                panelP2.GetComponent<AfficheCible>().SetLesCiblesVisu(playersTargets[player][0], playersTargets[player][1], playersTargets[player][2]);
+            }
+
+            targets = new List<GameObject>();
 
         }
 
