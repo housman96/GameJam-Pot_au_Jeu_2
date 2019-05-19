@@ -5,33 +5,65 @@ using UnityEngine;
 public class open_door : MonoBehaviour
 {
     // Start is called before the first frame update
-    private Collider m_BoxCollider;
-    private Renderer m_Renderer;
+    Collider2D m_BoxCollider;
+    SpriteRenderer m_Renderer;
+    bool trigger = false;
+    bool isKilled = false;
+    public Sprite BloodyDoor;
+    Sprite ColoredDoor;
+    GameObject villager;
+    GameObject player;
+
+    
+
+    void OnTriggerEnter2D (Collider2D other)
+    {
+        Debug.Log("TrigerEnter");
+        trigger = true;
+        player = other.gameObject;
+        Debug.Log("other: " + player);
+        Debug.Log(transform.parent.gameObject.GetComponent<House>());
+        villager = transform.parent.gameObject.GetComponent<House>().villager.gameObject;
+        Debug.Log("Villager: " + villager);
+        //m_BoxCollider.isTrigger = true;
+    }
+    
+    void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log("TrigerExit");
+        trigger = false;
+    }
 
     void Start()
     {
-        m_BoxCollider = GetComponent<BoxCollider>();
-        m_BoxCollider.enabled = true;
-        m_BoxCollider.isTrigger = false;
-        // m_SphereCollider = GetComponent<SphereCollider>();
-        // m_SphereCollider.isTrigger = false;
-        m_Renderer = GetComponent<Renderer>();
-        m_Renderer.enabled = true;
+        m_BoxCollider = GetComponent<Collider2D>();
+        m_Renderer = GetComponent<SpriteRenderer>();
+        ColoredDoor = m_Renderer.sprite;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && m_BoxCollider.isTrigger == true)
-        {
-            //Toggle the Collider on and off when pressing the space bar
-            //m_BoxCollider.enabled = false;
-            m_Renderer.enabled = false;
+        float p1 = Input.GetAxis("P1_Action");
+        float p2 = Input.GetAxis("P2_Action");
 
-            //Output to console whether the Collider is on or not
-            //Debug.Log("Collider.enabled = " + m_BoxCollider.enabled);
-            Debug.Log("Renderer.enabled = " + m_Renderer.enabled);
+        if (trigger == true &&  isKilled == false && (p1 == 1 || p2 ==2))
+        {
+            m_Renderer.sprite = BloodyDoor;
+            isKilled = true;
+            Debug.Log("Trigger: " + trigger+" // P1: "+ p1+ " // P2: " + p2);
+
+
+
+
+
+
+
+
+
+
         }
+        
 
     }
 }
