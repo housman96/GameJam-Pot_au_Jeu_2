@@ -18,8 +18,6 @@ public class Dialogue : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.Space)) {
 			foreach (GameObject villager in aliveVillagers) {
-				Debug.Log("=================");
-				Debug.Log(villager.GetComponent<Villager>().villagerName);
 				villager.GetComponent<Villager>().Print();
 			}
 		}
