@@ -9,13 +9,14 @@ public class CharacterInputController : MonoBehaviour
     public bool isPlayer = false;
     public float speed;
     private bool isInAnimation = false;
-    private Stack<Noeud> stack = new Stack<Noeud>();
+    [HideInInspector] public Stack<Noeud> stack = new Stack<Noeud>();
     private float animationDuration;
     private Vector3 targetAnimation;
     private Vector3 scaleAnimation;
     private float speedAnimation;
     private float speedScale;
     private float lastTime;
+    public bool isIA = false;
 
     private CharacterAnimationController animationController;
     private bool isLocked;
@@ -78,7 +79,6 @@ public class CharacterInputController : MonoBehaviour
             transform.localScale = Vector3.MoveTowards(transform.localScale, scaleAnimation, stepScale);
             transform.position = newPositon;
 
-
             if (transform.position == targetAnimation && transform.localScale == scaleAnimation)
             {
                 if (stack.Count == 0)
@@ -92,10 +92,6 @@ public class CharacterInputController : MonoBehaviour
                 }
 
             }
-
-
-
-
         }
         else
         {
@@ -118,7 +114,7 @@ public class CharacterInputController : MonoBehaviour
             }
         }
 
-        if (animationController != null)
+        if (animationController != null && !isIA)
         {
             animationController.input = input;
         }
@@ -182,10 +178,9 @@ public class CharacterInputController : MonoBehaviour
     {
         if (isInAnimation)
         {
-
-            stack.Clear();
-            targetAnimation = transform.position;
-            isInAnimation = false;
+            //stack.Clear();
+            //targetAnimation = transform.position;
+            //isInAnimation = false;
         }
     }
 }
