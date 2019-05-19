@@ -80,6 +80,8 @@ public class IAPNJjour : MonoBehaviour
         {
             isPlayerNear = true;
         }
+
+
     }
 
     public void OnTriggerExit2D(Collider2D collision)
