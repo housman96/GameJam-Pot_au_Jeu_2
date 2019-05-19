@@ -11,7 +11,6 @@ public class Astar : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Graphe graphe = new Graphe(new Vector2(0, 0), 5, 5, 0.1f);
     }
 
 
@@ -21,6 +20,11 @@ public class Astar : MonoBehaviour
 
         Noeud startNoeud = graphe.getNoeudAtPos(start.transform.position);
         Noeud targetNoeud = graphe.getNoeudAtPos(target.transform.position);
+
+        if (startNoeud == targetNoeud || (graphe.cols <= 1 && graphe.rows <= 1))
+        {
+            return new Stack<Noeud>();
+        }
 
         //on vérifi que les noeud sont bien dans le graphe
         if (startNoeud == null || targetNoeud == null)
@@ -45,10 +49,9 @@ public class Astar : MonoBehaviour
             //  on prend le noeud sur le dessus de l'openList
             Noeud u = openList[0];
             openList.Remove(u);
-
             //  si u.x == objectif.x et u.y == objectif.y
-            Collider2D uCollider = Physics2D.OverlapBox(u.position + start.GetComponent<BoxCollider2D>().offset, start.GetComponent<BoxCollider2D>().size, 0);
-            if (uCollider != null && uCollider.gameObject == target)
+            //Collider2D uCollider = Physics2D.OverlapBox(u.position + start.GetComponent<BoxCollider2D>().offset, start.GetComponent<BoxCollider2D>().size * 2f, 0);
+            if (targetNoeud == u)
             {
                 //on reconstruit le chemin
                 return buildPath(graphe, u);
@@ -62,11 +65,11 @@ public class Astar : MonoBehaviour
                 for (int j = -1; j <= 1; j++)
                 {
                     Vector2Int index = graphe.getIndexAtPos(u.position);
-                    if (index.x > 0 && index.y > 0 && (i != 0 || j != 0))
+
+                    if ((i == 0 || j == 0) && !(i == 0 && j == 0) && index.x + i >= 0 && index.y + j >= 0 && index.x + i < graphe.rows && index.y + j < graphe.cols)
                     {
 
                         v = graphe[index.x + i, index.y + j];
-
                         float newCout = u.cout + (u.position - v.position).magnitude;
 
                         //            si v existe dans closedList avec un cout inférieur ou si v existe dans openList avec un cout inférieur
@@ -75,7 +78,7 @@ public class Astar : MonoBehaviour
                         //                v.cout = u.cout +1 
                         //                v.heuristique = v.cout + distance([v.x, v.y], [objectif.x, objectif.y])
                         //                openList.ajouter(v)
-                        Collider2D vCollisioner = Physics2D.OverlapBox(v.position + start.GetComponent<BoxCollider2D>().offset, start.GetComponent<BoxCollider2D>().size, 0);
+                        Collider2D vCollisioner = Physics2D.OverlapBox(v.position + start.GetComponent<BoxCollider2D>().offset * start.transform.localScale, start.GetComponent<BoxCollider2D>().size * start.transform.localScale, 0);
                         if (newCout < v.cout && (vCollisioner == null || vCollisioner.gameObject == start || vCollisioner.gameObject == target))
                         {
 
@@ -89,7 +92,7 @@ public class Astar : MonoBehaviour
                             }
 
                             v.cout = newCout;
-                            v.heuristique = v.cout + (v.position - targetNoeud.position).magnitude;
+                            v.heuristique = 5 * (v.cout + (v.position - targetNoeud.position).magnitude);
                             v.previousNoeud = index;
                             openList.Add(v);
 
@@ -115,6 +118,7 @@ public class Astar : MonoBehaviour
         int i = 0;
         while (u.previousNoeud.x >= 0 && u.previousNoeud.y >= 0 && limite > i)
         {
+
             res.Push(u);
             u = graphe[u.previousNoeud.x, u.previousNoeud.y];
             i++;
