@@ -77,7 +77,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56163aa8659022f43bae8acb63cf9126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInFuite: 0
   repliPosition: {fileID: 0}
+  camera: {fileID: 0}
+  imageFondu: {fileID: 0}
+  cryClip: {fileID: 8300000, guid: 78ea079ec7a25244886a6da3c7e3053a, type: 3}
 --- !u!1001 &268674672960923781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -155,22 +159,17 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a68ecf29d39afe444b9a76a750ef2e7c, type: 2}
+    - target: {fileID: 8225179583340112723, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a68ecf29d39afe444b9a76a750ef2e7c, type: 2}
     - target: {fileID: 8225179583133548669, guid: 013b68cfa39b7604587a9944dabe73f9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a68ecf29d39afe444b9a76a750ef2e7c, type: 2}
     - target: {fileID: 8225179583182265765, guid: 013b68cfa39b7604587a9944dabe73f9,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a68ecf29d39afe444b9a76a750ef2e7c, type: 2}
-    - target: {fileID: 8225179583340112723, guid: 013b68cfa39b7604587a9944dabe73f9,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a68ecf29d39afe444b9a76a750ef2e7c, type: 2}
-    - target: {fileID: 8225179583391456361, guid: 013b68cfa39b7604587a9944dabe73f9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -190,6 +189,11 @@ PrefabInstance:
       propertyPath: m_Color.g
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8225179583391456361, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a68ecf29d39afe444b9a76a750ef2e7c, type: 2}
     - target: {fileID: 8225179583655045307, guid: 013b68cfa39b7604587a9944dabe73f9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

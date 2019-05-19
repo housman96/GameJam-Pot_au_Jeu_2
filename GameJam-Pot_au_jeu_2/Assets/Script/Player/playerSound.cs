@@ -3,16 +3,44 @@
 public class playerSound : MonoBehaviour
 {
 
-    public AudioSource source;
+    public AudioSource sourceStep;
+
+    public AudioSource sourceSword;
+
+    public AudioSource sourceBowStart;
+
+    public AudioSource sourceBowEnd;
 
     public AudioClip[] stepClip;
 
     public AudioClip[] swordClip;
 
+    public AudioClip[] bowStartClip;
+
+    public AudioClip[] bowReleaseClip;
+
     // Use this for initialization
     void Start()
     {
+        sourceStep = gameObject.AddComponent<AudioSource>();
+        sourceSword = gameObject.AddComponent<AudioSource>();
+        sourceBowStart = gameObject.AddComponent<AudioSource>();
+        sourceBowEnd = gameObject.AddComponent<AudioSource>();
 
+        sourceStep.playOnAwake = false;
+        sourceSword.playOnAwake = false;
+        sourceBowStart.playOnAwake = false;
+        sourceBowEnd.playOnAwake = false;
+
+        sourceStep.loop = false;
+        sourceSword.loop = false;
+        sourceBowStart.loop = false;
+        sourceBowEnd.loop = false;
+
+        sourceStep.volume = 0.5f;
+        sourceSword.volume = 0.25f;
+        sourceBowStart.volume = 1f;
+        sourceBowEnd.volume = 1f;
     }
 
     // Update is called once per frame
@@ -22,31 +50,76 @@ public class playerSound : MonoBehaviour
 
     public void stepSound()
     {
-        if (stepClip.Length > 0)
+        if (stepClip.Length > 1 && transform.parent.parent.tag == "Player" && !transform.parent.parent.GetComponent<Fuite>().isInFuite)
         {
-            source.Stop();
+            sourceStep.Stop();
             int clipIndex = Random.Range(0, stepClip.Length);
-            while (source.clip == stepClip[clipIndex])
+            while (sourceStep.clip == stepClip[clipIndex])
             {
                 clipIndex = Random.Range(0, stepClip.Length);
             }
-            source.clip = stepClip[clipIndex];
-            source.Play();
+            sourceStep.clip = stepClip[clipIndex];
+            sourceStep.Play();
         }
     }
 
     public void swordSound()
     {
-        if (swordClip.Length > 0 && !source.isPlaying)
+        if (swordClip.Length > 1 && !sourceSword.isPlaying)
         {
-            source.Stop();
+            sourceSword.Stop();
             int clipIndex = Random.Range(0, swordClip.Length);
-            while (source.clip == swordClip[clipIndex])
+            while (sourceSword.clip == swordClip[clipIndex])
             {
                 clipIndex = Random.Range(0, swordClip.Length);
             }
-            source.clip = swordClip[clipIndex];
-            source.Play();
+            sourceSword.clip = swordClip[clipIndex];
+            sourceSword.Play();
+        }
+    }
+
+    public void bowStart()
+    {
+        if (bowStartClip.Length > 1 && !sourceBowStart.isPlaying)
+        {
+            sourceBowStart.Stop();
+            int clipIndex = Random.Range(0, bowStartClip.Length);
+            while (sourceBowStart.clip == bowStartClip[clipIndex])
+            {
+                clipIndex = Random.Range(0, bowStartClip.Length);
+            }
+            sourceBowStart.clip = bowStartClip[clipIndex];
+            sourceBowStart.Play();
+        }
+
+
+        if (bowStartClip.Length == 1 && !sourceBowStart.isPlaying)
+        {
+            sourceBowStart.Stop();
+            sourceBowStart.clip = bowStartClip[0];
+            sourceBowStart.Play();
+        }
+    }
+
+    public void bowRelease()
+    {
+        if (bowReleaseClip.Length > 1 && !sourceBowEnd.isPlaying)
+        {
+            sourceBowEnd.Stop();
+            int clipIndex = Random.Range(0, bowReleaseClip.Length);
+            while (sourceBowEnd.clip == bowReleaseClip[clipIndex])
+            {
+                clipIndex = Random.Range(0, bowReleaseClip.Length);
+            }
+            sourceBowEnd.clip = bowReleaseClip[clipIndex];
+            sourceBowEnd.Play();
+        }
+
+        if (bowReleaseClip.Length == 1 && !sourceBowEnd.isPlaying)
+        {
+            sourceBowEnd.Stop();
+            sourceBowEnd.clip = bowReleaseClip[0];
+            sourceBowEnd.Play();
         }
     }
 }

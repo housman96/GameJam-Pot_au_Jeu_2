@@ -24,9 +24,12 @@ public class gameManager : MonoBehaviour
 
     public Character skinWerewolf;
 
+    public AudioClip yellingWolvesClip;
+    public AudioClip morningClip;
+
     private void Start()
     {
-        for(int i = 0; i < playerList.Count; i++)
+        for (int i = 0; i < playerList.Count; i++)
         {
             playersSpawn.Add(playerList[i], spawnList[i]);
             playersSkin.Add(playerList[i], skinList[i]);
@@ -49,10 +52,11 @@ public class gameManager : MonoBehaviour
                 player.transform.position = new Vector3(spawnPosX, spawnPosY, 0);
 
                 player.gameObject.GetComponent<CharacterEnabler>().changeSkin(player, skinWerewolf);
+                StartCoroutine("yellingWolves");
             }
 
         }
-        else if(timeValue >= 0 && timeValue <= 0.25)
+        else if (timeValue >= 0 && timeValue <= 0.25)
         {
             foreach (GameObject player in playerList)
             {
@@ -63,6 +67,31 @@ public class gameManager : MonoBehaviour
 
                 player.gameObject.GetComponent<CharacterEnabler>().changeSkin(player, playersSkin[player]);
             }
+            StartCoroutine("morning");
         }
+    }
+
+    public IEnumerator yellingWolves()
+    {
+        AudioSource listener = gameObject.AddComponent<AudioSource>();
+        listener.playOnAwake = false;
+        listener.clip = yellingWolvesClip;
+        listener.loop = false;
+        listener.volume = 0.4f;
+        listener.Play();
+        yield return new WaitUntil(() => !listener.isPlaying);
+        Destroy(listener);
+    }
+
+    public IEnumerator morning()
+    {
+        AudioSource listener = gameObject.AddComponent<AudioSource>();
+        listener.playOnAwake = false;
+        listener.clip = morningClip;
+        listener.loop = false;
+        listener.volume = 0.4f;
+        listener.Play();
+        yield return new WaitUntil(() => !listener.isPlaying);
+        Destroy(listener);
     }
 }
