@@ -17,7 +17,7 @@ public class AfficheCible : MonoBehaviour
     private GameObject cible1;
     private GameObject cible2;
     private GameObject cible3;
-    
+
     // Start is called before the first frame update
     void Start()
     {

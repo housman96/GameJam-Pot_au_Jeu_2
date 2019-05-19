@@ -1373,6 +1373,7 @@ GameObject:
   - component: {fileID: 7322287999599760391}
   - component: {fileID: 4076893876052617826}
   - component: {fileID: 5760781247372853776}
+  - component: {fileID: 152060758}
   m_Layer: 5
   m_Name: P2UI
   m_TagString: Untagged
@@ -1437,6 +1438,24 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &152060758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2584387954255681800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5292e11a9acd5af4a834becce8f71b60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target1: {fileID: 8514726231424948196}
+  target2: {fileID: 1817774055197237961}
+  target3: {fileID: 8803783643809027737}
+  target1Done: {fileID: 7690129086327429675}
+  target2Done: {fileID: 2939578185988808633}
+  target3Done: {fileID: 7864288406115001369}
 --- !u!1 &3172631740987597000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,6 +2176,7 @@ GameObject:
   - component: {fileID: 7716200144619170065}
   - component: {fileID: 2559814573334045439}
   - component: {fileID: 9132590122630814707}
+  - component: {fileID: 4803525734017684217}
   m_Layer: 5
   m_Name: P1UI
   m_TagString: Untagged
@@ -2221,6 +2241,24 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &4803525734017684217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4970731882888332736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5292e11a9acd5af4a834becce8f71b60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target1: {fileID: 5839331143713205043}
+  target2: {fileID: 3340700897362067211}
+  target3: {fileID: 8145814136121270938}
+  target1Done: {fileID: 24286722474131536}
+  target2Done: {fileID: 4535988265387320345}
+  target3Done: {fileID: 5176710963539370429}
 --- !u!1 &5097054353162908840
 GameObject:
   m_ObjectHideFlags: 0
