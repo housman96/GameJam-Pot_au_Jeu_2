@@ -29,16 +29,15 @@ public class gameManager : MonoBehaviour
 
     public GameObject deadVillager;
 
-    public GameObject panelP1;
-    public GameObject panelP2;
-
-
     public AudioClip yellingWolvesClip;
     public AudioClip morningClip;
 
     private void Start()
     {
+<<<<<<< HEAD:GameJam-Pot_au_jeu_2/Assets/gameManager.cs
+=======
 
+>>>>>>> develop:GameJam-Pot_au_jeu_2/Assets/Script/gameManager.cs
         for (int i = 0; i < playerList.Count; i++)
         {
             playersSpawn.Add(playerList[i], spawnList[i]);
@@ -50,7 +49,7 @@ public class gameManager : MonoBehaviour
         foreach(GameObject villager in temp)
         {
             villagerList.Add(villager);
-    }
+        }
 
         foreach(GameObject player in playerList)
         {
@@ -70,22 +69,9 @@ public class gameManager : MonoBehaviour
             targets.Add(villagerList[randIndex2]);
             targets.Add(villagerList[randIndex3]);
 
-
             playersTargets.Add(player, targets);
-
-
-
-
-            if (player.tag == "Player1")
-            {
-                panelP1.GetComponent<AfficheCible>().SetLesCiblesVisu(playersTargets[player][0], playersTargets[player][1], playersTargets[player][2]);
-            }
-            else if (player.tag == "Player2")
-            {
-                panelP2.GetComponent<AfficheCible>().SetLesCiblesVisu(playersTargets[player][0], playersTargets[player][1], playersTargets[player][2]);
-            }
-
             targets = new List<GameObject>();
+
 
         }
 
@@ -105,9 +91,9 @@ public class gameManager : MonoBehaviour
                 player.transform.position = new Vector3(spawnPosX, spawnPosY, 0);
 
                 player.gameObject.GetComponent<CharacterEnabler>().changeSkin(player, skinWerewolf);
-                
+                StartCoroutine("yellingWolves");
             }
-			StartCoroutine("yellingWolves");
+
         }
         else if (timeValue >= 0 && timeValue <= 0.25)
         {

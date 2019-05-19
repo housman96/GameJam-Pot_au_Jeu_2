@@ -77,9 +77,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56163aa8659022f43bae8acb63cf9126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInFuite: 0
   repliPosition: {fileID: 0}
   camera: {fileID: 0}
   imageFondu: {fileID: 0}
+  cryClip: {fileID: 8300000, guid: 78ea079ec7a25244886a6da3c7e3053a, type: 3}
 --- !u!1001 &268674672960923781
 PrefabInstance:
   m_ObjectHideFlags: 0
