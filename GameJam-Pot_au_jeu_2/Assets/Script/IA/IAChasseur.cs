@@ -90,7 +90,7 @@ public class IAChasseur : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player1" || collision.tag == "Player2")
         {
             playerToAttack = collision.gameObject;
             isPlayerNear = true;
