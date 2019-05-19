@@ -25,7 +25,6 @@ public class open_door : MonoBehaviour
         Debug.Log(transform.parent.gameObject.GetComponent<House>());
         villager = transform.parent.gameObject.GetComponent<House>().villager.gameObject;
         Debug.Log("Villager: " + villager);
-        //m_BoxCollider.isTrigger = true;
     }
     
     void OnTriggerExit2D(Collider2D other)

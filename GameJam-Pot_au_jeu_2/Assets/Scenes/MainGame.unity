@@ -120,54 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &96895569
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 96895570}
-  - component: {fileID: 96895571}
-  m_Layer: 0
-  m_Name: Villager (5)
-  m_TagString: Villager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &96895570
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96895569}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1588102048}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &96895571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96895569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77710935cde5f264699f9a1160d06108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  villagerName: Paul
-  house: {fileID: 0}
-  villagerToTalk1: {fileID: 0}
-  villagerToTalk2: {fileID: 0}
-  villagerToTalk3: {fileID: 0}
 --- !u!1001 &123704601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -257,54 +209,6 @@ PrefabInstance:
       objectReference: {fileID: 5760781247372853776}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db9f123c207149142b6f0f01a2749b32, type: 3}
---- !u!1 &187823079
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 187823080}
-  - component: {fileID: 187823081}
-  m_Layer: 0
-  m_Name: Villager (8)
-  m_TagString: Villager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &187823080
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187823079}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1588102048}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &187823081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187823079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77710935cde5f264699f9a1160d06108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  villagerName: Paul
-  house: {fileID: 0}
-  villagerToTalk1: {fileID: 0}
-  villagerToTalk2: {fileID: 0}
-  villagerToTalk3: {fileID: 0}
 --- !u!108 &513081621 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 1583689086440424262, guid: 5f0497b0ef6f05a4590bf10cdc5ccd3f,
@@ -380,55 +284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f0497b0ef6f05a4590bf10cdc5ccd3f, type: 3}
---- !u!1 &1119599801
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1119599802}
-  - component: {fileID: 1119599803}
-  m_Layer: 0
-  m_Name: Villager (10)
-  m_TagString: Villager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1119599802
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119599801}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1588102048}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1119599803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119599801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77710935cde5f264699f9a1160d06108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  villagerName: Paul
-  house: {fileID: 0}
-  villagerToTalk1: {fileID: 0}
-  villagerToTalk2: {fileID: 0}
-  villagerToTalk3: {fileID: 0}
---- !u!1001 &1190044030
+--- !u!1001 &1303227567
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -497,150 +353,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 219d1656c3d933d4db598b1a444254d3, type: 3}
---- !u!1 &1309488397
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1309488398}
-  - component: {fileID: 1309488399}
-  m_Layer: 0
-  m_Name: Villager (1)
-  m_TagString: Villager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1309488398
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309488397}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1588102048}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1309488399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309488397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77710935cde5f264699f9a1160d06108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  villagerName: Bob
-  house: {fileID: 0}
-  villagerToTalk1: {fileID: 0}
-  villagerToTalk2: {fileID: 0}
-  villagerToTalk3: {fileID: 0}
---- !u!1 &1364144084
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1364144085}
-  - component: {fileID: 1364144086}
-  m_Layer: 0
-  m_Name: Villager (2)
-  m_TagString: Villager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1364144085
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364144084}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1588102048}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1364144086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364144084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77710935cde5f264699f9a1160d06108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  villagerName: Charles
-  house: {fileID: 0}
-  villagerToTalk1: {fileID: 0}
-  villagerToTalk2: {fileID: 0}
-  villagerToTalk3: {fileID: 0}
---- !u!1 &1391083514
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1391083515}
-  - component: {fileID: 1391083516}
-  m_Layer: 0
-  m_Name: Villager (4)
-  m_TagString: Villager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1391083515
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391083514}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1588102048}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1391083516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391083514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77710935cde5f264699f9a1160d06108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  villagerName: Paul
-  house: {fileID: 0}
-  villagerToTalk1: {fileID: 0}
-  villagerToTalk2: {fileID: 0}
-  villagerToTalk3: {fileID: 0}
 --- !u!114 &1468923464 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1021430054481238077, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9,
@@ -653,391 +365,6 @@ MonoBehaviour:
   m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1532306735
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7169373730941979036, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: m_Name
-      value: NPCInitializer
-      objectReference: {fileID: 0}
-    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: houses.Array.size
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: villagers.Array.size
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: houses.Array.data[0]
-      value: 
-      objectReference: {fileID: 3152372678452689666}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: houses.Array.data[1]
-      value: 
-      objectReference: {fileID: 3152372678452689665}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: houses.Array.data[2]
-      value: 
-      objectReference: {fileID: 3152372678452689664}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: houses.Array.data[3]
-      value: 
-      objectReference: {fileID: 3152372678452689663}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: houses.Array.data[4]
-      value: 
-      objectReference: {fileID: 3152372678452689662}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: houses.Array.data[5]
-      value: 
-      objectReference: {fileID: 3152372678452689661}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: houses.Array.data[6]
-      value: 
-      objectReference: {fileID: 3152372678452689660}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: houses.Array.data[7]
-      value: 
-      objectReference: {fileID: 3152372678452689659}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: houses.Array.data[8]
-      value: 
-      objectReference: {fileID: 3152372678452689658}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: houses.Array.data[9]
-      value: 
-      objectReference: {fileID: 3152372678452689657}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: houses.Array.data[10]
-      value: 
-      objectReference: {fileID: 3152372678452689656}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: houses.Array.data[11]
-      value: 
-      objectReference: {fileID: 3152372678452689655}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: villagers.Array.data[0]
-      value: 
-      objectReference: {fileID: 2058170948}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: villagers.Array.data[1]
-      value: 
-      objectReference: {fileID: 1309488397}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: villagers.Array.data[2]
-      value: 
-      objectReference: {fileID: 1364144084}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: villagers.Array.data[3]
-      value: 
-      objectReference: {fileID: 2074382913}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: villagers.Array.data[4]
-      value: 
-      objectReference: {fileID: 1391083514}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: villagers.Array.data[5]
-      value: 
-      objectReference: {fileID: 96895569}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: villagers.Array.data[6]
-      value: 
-      objectReference: {fileID: 2086747116}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: villagers.Array.data[7]
-      value: 
-      objectReference: {fileID: 1794415304}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: villagers.Array.data[8]
-      value: 
-      objectReference: {fileID: 187823079}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: villagers.Array.data[9]
-      value: 
-      objectReference: {fileID: 1741983761}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: villagers.Array.data[10]
-      value: 
-      objectReference: {fileID: 1119599801}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: villagers.Array.data[11]
-      value: 
-      objectReference: {fileID: 1833476410}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5ede08329dddf4b499f48a5c1e6b45f8, type: 3}
---- !u!1 &1588102047
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1588102048}
-  m_Layer: 0
-  m_Name: Villagers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1588102048
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1588102047}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2058170949}
-  - {fileID: 1309488398}
-  - {fileID: 1364144085}
-  - {fileID: 2074382914}
-  - {fileID: 1391083515}
-  - {fileID: 96895570}
-  - {fileID: 2086747117}
-  - {fileID: 1794415305}
-  - {fileID: 187823080}
-  - {fileID: 1741983762}
-  - {fileID: 1119599802}
-  - {fileID: 1833476411}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1741983761
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1741983762}
-  - component: {fileID: 1741983763}
-  m_Layer: 0
-  m_Name: Villager (9)
-  m_TagString: Villager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1741983762
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741983761}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1588102048}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1741983763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741983761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77710935cde5f264699f9a1160d06108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  villagerName: Paul
-  house: {fileID: 0}
-  villagerToTalk1: {fileID: 0}
-  villagerToTalk2: {fileID: 0}
-  villagerToTalk3: {fileID: 0}
---- !u!1 &1794415304
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1794415305}
-  - component: {fileID: 1794415306}
-  m_Layer: 0
-  m_Name: Villager (7)
-  m_TagString: Villager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1794415305
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1794415304}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1588102048}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1794415306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1794415304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77710935cde5f264699f9a1160d06108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  villagerName: Paul
-  house: {fileID: 0}
-  villagerToTalk1: {fileID: 0}
-  villagerToTalk2: {fileID: 0}
-  villagerToTalk3: {fileID: 0}
---- !u!1 &1833476410
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1833476411}
-  - component: {fileID: 1833476412}
-  m_Layer: 0
-  m_Name: Villager (11)
-  m_TagString: Villager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1833476411
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833476410}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1588102048}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1833476412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833476410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77710935cde5f264699f9a1160d06108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  villagerName: Paul
-  house: {fileID: 0}
-  villagerToTalk1: {fileID: 0}
-  villagerToTalk2: {fileID: 0}
-  villagerToTalk3: {fileID: 0}
 --- !u!1001 &1847916335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1112,150 +439,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4a16d7a2f418f44fa621994ea41cba6, type: 3}
---- !u!1 &2058170948
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2058170949}
-  - component: {fileID: 2058170950}
-  m_Layer: 0
-  m_Name: Villager
-  m_TagString: Villager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2058170949
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058170948}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1588102048}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2058170950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058170948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77710935cde5f264699f9a1160d06108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  villagerName: Billy
-  house: {fileID: 0}
-  villagerToTalk1: {fileID: 0}
-  villagerToTalk2: {fileID: 0}
-  villagerToTalk3: {fileID: 0}
---- !u!1 &2074382913
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2074382914}
-  - component: {fileID: 2074382915}
-  m_Layer: 0
-  m_Name: Villager (3)
-  m_TagString: Villager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2074382914
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074382913}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1588102048}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2074382915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074382913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77710935cde5f264699f9a1160d06108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  villagerName: Paul
-  house: {fileID: 0}
-  villagerToTalk1: {fileID: 0}
-  villagerToTalk2: {fileID: 0}
-  villagerToTalk3: {fileID: 0}
---- !u!1 &2086747116
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2086747117}
-  - component: {fileID: 2086747118}
-  m_Layer: 0
-  m_Name: Villager (6)
-  m_TagString: Villager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2086747117
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086747116}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1588102048}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2086747118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086747116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77710935cde5f264699f9a1160d06108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  villagerName: Paul
-  house: {fileID: 0}
-  villagerToTalk1: {fileID: 0}
-  villagerToTalk2: {fileID: 0}
-  villagerToTalk3: {fileID: 0}
 --- !u!1001 &2094136235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1461,11 +644,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maisons
       objectReference: {fileID: 0}
-    - target: {fileID: 2154108731088410690, guid: 6091d84c91142ef4d9ff625d9d230475,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3152372678300870458, guid: 6091d84c91142ef4d9ff625d9d230475,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1521,18 +699,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2403304878499111788, guid: 6091d84c91142ef4d9ff625d9d230475,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4180346321280427712, guid: 6091d84c91142ef4d9ff625d9d230475,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2403304878499111788, guid: 6091d84c91142ef4d9ff625d9d230475, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6091d84c91142ef4d9ff625d9d230475, type: 3}
 --- !u!1 &3152372678452689655 stripped
 GameObject:
@@ -1621,7 +788,6 @@ MonoBehaviour:
   size: 1
   door: 0
   deco: 1
-  villager: {fileID: 0}
 --- !u!114 &3152372678452689668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1637,7 +803,6 @@ MonoBehaviour:
   size: 2
   door: 1
   deco: 0
-  villager: {fileID: 0}
 --- !u!114 &3152372678452689669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1653,7 +818,6 @@ MonoBehaviour:
   size: 2
   door: 2
   deco: 2
-  villager: {fileID: 0}
 --- !u!114 &3152372678452689670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1669,7 +833,6 @@ MonoBehaviour:
   size: 2
   door: 1
   deco: 2
-  villager: {fileID: 0}
 --- !u!114 &3152372678452689671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1685,7 +848,6 @@ MonoBehaviour:
   size: 1
   door: 0
   deco: 0
-  villager: {fileID: 0}
 --- !u!114 &3152372678452689672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1701,7 +863,6 @@ MonoBehaviour:
   size: 1
   door: 2
   deco: 2
-  villager: {fileID: 0}
 --- !u!114 &3152372678452689673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1717,7 +878,6 @@ MonoBehaviour:
   size: 1
   door: 2
   deco: 1
-  villager: {fileID: 0}
 --- !u!114 &3152372678452689674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1733,7 +893,6 @@ MonoBehaviour:
   size: 0
   door: 0
   deco: 1
-  villager: {fileID: 0}
 --- !u!114 &3152372678452689675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1749,7 +908,6 @@ MonoBehaviour:
   size: 0
   door: 1
   deco: 2
-  villager: {fileID: 0}
 --- !u!114 &3152372678452689676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1765,7 +923,6 @@ MonoBehaviour:
   size: 0
   door: 1
   deco: 0
-  villager: {fileID: 0}
 --- !u!114 &3152372678452689677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1781,7 +938,6 @@ MonoBehaviour:
   size: 2
   door: 2
   deco: 1
-  villager: {fileID: 0}
 --- !u!114 &3152372678452689678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1797,7 +953,6 @@ MonoBehaviour:
   size: 0
   door: 0
   deco: 0
-  villager: {fileID: 0}
 --- !u!1001 &3461780981521741961
 PrefabInstance:
   m_ObjectHideFlags: 0
