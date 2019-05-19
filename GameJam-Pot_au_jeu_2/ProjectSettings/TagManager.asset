@@ -5,11 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Character
+<<<<<<< HEAD
   - Laser
   - Enemy
   - Villager
   - FlowchartP1
   - FlowchartP2
+=======
+>>>>>>> develop
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Character
   - 
   - 
   - 
@@ -46,4 +49,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: character
+    uniqueID: 3951540313
+    locked: 0
+  - name: foreground
+    uniqueID: 519413883
     locked: 0
