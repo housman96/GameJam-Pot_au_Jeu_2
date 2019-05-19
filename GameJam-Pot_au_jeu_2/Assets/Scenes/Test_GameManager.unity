@@ -1520,19 +1520,7 @@ MonoBehaviour:
   skinList:
   - {fileID: 11400000, guid: e60ce3aa9c506c343a09ab46ab36a15e, type: 2}
   - {fileID: 11400000, guid: 04bb03c66e4784b4295c4edbfe28a738, type: 2}
-  characterWerewolf: {fileID: 11400000, guid: 1cb05530cec0ac54ba4be42d643dcc0c, type: 2}
-  name: 
-  body: {fileID: 0}
-  eyes: {fileID: 0}
-  chest: {fileID: 0}
-  arms: {fileID: 0}
-  pant: {fileID: 0}
-  shoes: {fileID: 0}
-  hands: {fileID: 0}
-  hair: {fileID: 0}
-  weapon: {fileID: 0}
-  hat: {fileID: 0}
-  nose: {fileID: 0}
+  skinWerewolf: {fileID: 11400000, guid: 1cb05530cec0ac54ba4be42d643dcc0c, type: 2}
 --- !u!4 &1021246408
 Transform:
   m_ObjectHideFlags: 0
