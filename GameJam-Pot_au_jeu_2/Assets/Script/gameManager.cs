@@ -36,6 +36,8 @@ public class gameManager : MonoBehaviour
     public AudioClip yellingWolvesClip;
     public AudioClip morningClip;
 
+    public static gameManager Instance { get; set; }
+
     private void Start()
     {
 
@@ -146,5 +148,14 @@ public class gameManager : MonoBehaviour
         listener.Play();
         yield return new WaitUntil(() => !listener.isPlaying);
         Destroy(listener);
+    }
+
+    public void killVillager(GameObject player, GameObject villager)
+    {
+        deadVillager = villager;
+
+        deadVillager.SetActive(false);
+
+        
     }
 }
