@@ -10,10 +10,11 @@ public class Fuite : MonoBehaviour
     private Vector3 lastPosition;
     private AIDestinationSetter destinationSetter;
     private AILerp lerp;
-    private bool isInFuite = false;
+    public bool isInFuite = false;
     public Transform repliPosition;
     public GameObject camera;
     public Image imageFondu;
+    public AudioClip cryClip;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +54,7 @@ public class Fuite : MonoBehaviour
         isInFuite = true;
         camera.SetActive(false);
         StartCoroutine("fadeOut");
+        StartCoroutine("cry");
     }
 
     public IEnumerator fadeOut()
@@ -63,5 +65,17 @@ public class Fuite : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         camera.SetActive(true);
+    }
+
+    public IEnumerator cry()
+    {
+        AudioSource listener = gameObject.AddComponent<AudioSource>();
+        listener.playOnAwake = false;
+        listener.clip = cryClip;
+        listener.loop = false;
+        listener.volume = 0.4f;
+        listener.Play();
+        yield return new WaitUntil(() => !listener.isPlaying);
+        Destroy(listener);
     }
 }

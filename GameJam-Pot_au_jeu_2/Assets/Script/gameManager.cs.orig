@@ -34,7 +34,10 @@ public class gameManager : MonoBehaviour
 
     private void Start()
     {
+<<<<<<< HEAD:GameJam-Pot_au_jeu_2/Assets/gameManager.cs
+=======
 
+>>>>>>> develop:GameJam-Pot_au_jeu_2/Assets/Script/gameManager.cs
         for (int i = 0; i < playerList.Count; i++)
         {
             playersSpawn.Add(playerList[i], spawnList[i]);
@@ -46,7 +49,7 @@ public class gameManager : MonoBehaviour
         foreach(GameObject villager in temp)
         {
             villagerList.Add(villager);
-    }
+        }
 
         foreach(GameObject player in playerList)
         {
@@ -88,9 +91,9 @@ public class gameManager : MonoBehaviour
                 player.transform.position = new Vector3(spawnPosX, spawnPosY, 0);
 
                 player.gameObject.GetComponent<CharacterEnabler>().changeSkin(player, skinWerewolf);
-                
+                StartCoroutine("yellingWolves");
             }
-			StartCoroutine("yellingWolves");
+
         }
         else if (timeValue >= 0 && timeValue <= 0.25)
         {
