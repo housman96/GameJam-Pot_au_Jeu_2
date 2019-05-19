@@ -13,26 +13,62 @@ public class gameManager : MonoBehaviour
     public Dictionary<GameObject, int> scores = new Dictionary<GameObject, int>();
     public Dictionary<GameObject, GameObject> playersSpawn = new Dictionary<GameObject, GameObject>();
     public Dictionary<GameObject, Character> playersSkin = new Dictionary<GameObject, Character>();
+    public Dictionary<GameObject, List<GameObject>> playersTargets = new Dictionary<GameObject, List<GameObject>>();
 
-    public List<GameObject> pnjList;
+    public List<GameObject> villagerList;
+    public List<GameObject> targets = new List<GameObject>();
+
     public List<GameObject> playerList;
     public List<GameObject> spawnList;
     public List<Character> skinList;
 
+    public Character skinWerewolf;
+
     private float spawnPosX;
     private float spawnPosY;
 
-    public Character skinWerewolf;
+    public GameObject deadVillager;
 
     private void Start()
     {
-        for(int i = 0; i < playerList.Count; i++)
+
+        for (int i = 0; i < playerList.Count; i++)
         {
             playersSpawn.Add(playerList[i], spawnList[i]);
             playersSkin.Add(playerList[i], skinList[i]);
-            Debug.Log(playerList[i].name);
-            Debug.Log(skinList[i].name);
         }
+
+        GameObject[] temp = GameObject.FindGameObjectsWithTag("Villager");
+
+        foreach(GameObject villager in temp)
+        {
+            villagerList.Add(villager);
+        }
+
+        foreach(GameObject player in playerList)
+        {
+            int randIndex1;
+            int randIndex2;
+            int randIndex3;
+
+            do
+            {
+                randIndex1 = Random.Range(0, villagerList.Count);
+                randIndex2 = Random.Range(0, villagerList.Count);
+                randIndex3 = Random.Range(0, villagerList.Count);
+
+            } while (randIndex1 != randIndex2 && randIndex1 != randIndex3 && randIndex2 != randIndex3);
+
+            targets.Add(villagerList[randIndex1]);
+            targets.Add(villagerList[randIndex2]);
+            targets.Add(villagerList[randIndex3]);
+
+            playersTargets.Add(player, targets);
+            targets = new List<GameObject>();
+
+
+        }
+
     }
 
     private void Update()

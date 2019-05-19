@@ -7,7 +7,6 @@ public class CharacterEnabler : MonoBehaviour
 
     public string name;
 
-
     //part body
     public GameObject body;
     public GameObject eyes;
