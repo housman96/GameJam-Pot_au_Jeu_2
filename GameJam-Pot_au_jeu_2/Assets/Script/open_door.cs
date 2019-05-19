@@ -1,15 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class open_door : MonoBehaviour
 {
     // Start is called before the first frame update
-    Collider2D m_BoxCollider;
-    SpriteRenderer m_Renderer;
+    public Sprite BloodyDoor;
+    
+    public GameObject camera;
+
     bool trigger = false;
     bool isKilled = false;
-    public Sprite BloodyDoor;
+
+    Image imageFondu;
+    Image p1UI;
+    Image p2UI;
+    Collider2D m_BoxCollider;
+    SpriteRenderer m_Renderer;
     Sprite ColoredDoor;
     GameObject villager;
     GameObject player;
@@ -38,6 +46,10 @@ public class open_door : MonoBehaviour
         m_BoxCollider = GetComponent<Collider2D>();
         m_Renderer = GetComponent<SpriteRenderer>();
         ColoredDoor = m_Renderer.sprite;
+
+
+        p1UI = GameObject.Find("P1UI").GetComponent<Image>();
+        p2UI = GameObject.Find("P2UI").GetComponent<Image>(); ;
     }
 
     // Update is called once per frame
@@ -48,21 +60,23 @@ public class open_door : MonoBehaviour
 
         if (trigger == true &&  isKilled == false && (p1 == 1 || p2 ==2))
         {
-            m_Renderer.sprite = BloodyDoor;
-            isKilled = true;
+            if (p1 == 1) { imageFondu = p1UI; } 
+            else { imageFondu = p2UI; }
             Debug.Log("Trigger: " + trigger+" // P1: "+ p1+ " // P2: " + p2);
-
-
-
-
-
-
-
-
-
-
+            isKilled = true;
+            StartCoroutine("fadeOut");
         }
         
 
+    }
+
+    public IEnumerator fadeOut()
+    {
+        while (imageFondu.color.a < 1)
+        {
+            imageFondu.color = new Color(imageFondu.color.r, imageFondu.color.g, imageFondu.color.b, imageFondu.color.a + 0.01f);
+            yield return new WaitForSeconds(0.01f);
+        }
+        m_Renderer.sprite = BloodyDoor;
     }
 }

@@ -105,7 +105,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.6}
+  m_Size: {x: 0.3, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &4333987990211145785
 MonoBehaviour:
@@ -120,3 +120,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BloodyDoor: {fileID: 21300000, guid: 8f9b6e79cc2284946a18987482f74fe0, type: 3}
+  imageFondu: {fileID: 0}
+  camera: {fileID: 0}
