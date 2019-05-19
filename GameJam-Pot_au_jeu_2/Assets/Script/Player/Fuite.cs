@@ -52,7 +52,6 @@ public class Fuite : MonoBehaviour
         lastPosition = transform.position;
         isInFuite = true;
         camera.SetActive(false);
-        camera.SetActive(true);
         StartCoroutine("fadeOut");
     }
 
@@ -63,5 +62,6 @@ public class Fuite : MonoBehaviour
             imageFondu.color = new Color(imageFondu.color.r, imageFondu.color.g, imageFondu.color.b, imageFondu.color.a + 0.01f);
             yield return new WaitForSeconds(0.01f);
         }
+        camera.SetActive(true);
     }
 }
