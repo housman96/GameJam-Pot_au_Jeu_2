@@ -50,7 +50,7 @@ public class playerSound : MonoBehaviour
 
     public void stepSound()
     {
-        if (stepClip.Length > 1 && transform.parent.parent.tag == "Player" && !transform.parent.parent.GetComponent<Fuite>().isInFuite)
+        if (stepClip.Length > 1 && (transform.parent.parent.tag == "Player1" || transform.parent.parent.tag == "Player2") && !transform.parent.parent.GetComponent<Fuite>().isInFuite)
         {
             sourceStep.Stop();
             int clipIndex = Random.Range(0, stepClip.Length);
