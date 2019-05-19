@@ -15,9 +15,9 @@ TagManager:
   - UI
   - 
   - 
-  - Character
-  - P1Cam
-  - P2Cam
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -42,10 +42,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: character
-    uniqueID: 3951540313
-    locked: 0
-  - name: foreground
-    uniqueID: 519413883
     locked: 0
