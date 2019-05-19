@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Character
+  - Villager
   layers:
   - Default
   - TransparentFX
@@ -42,9 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: character
-    uniqueID: 3951540313
+  - name: Character
+    uniqueID: 3823658313
     locked: 0
-  - name: foreground
-    uniqueID: 519413883
+  - name: Foreground
+    uniqueID: 3169060577
     locked: 0

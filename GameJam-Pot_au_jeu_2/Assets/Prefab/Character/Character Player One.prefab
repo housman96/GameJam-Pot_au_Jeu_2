@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &268674672960923781
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8225179583981654152, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_Name
+      value: ' Character Player One'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179583981654197, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179583981654197, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179583981654197, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179583981654197, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179583981654197, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179583981654197, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179583981654197, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179583981654197, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179583981654197, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179583981654197, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179583981654197, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179583981654194, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: isPlayerOne
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179583981654158, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 11400000, guid: e60ce3aa9c506c343a09ab46ab36a15e,
+        type: 2}
+    - target: {fileID: 8225179583610434819, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.13762379
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179583610434819, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179585149378033, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.47766423
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179585149378033, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.3726415
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 013b68cfa39b7604587a9944dabe73f9, type: 3}

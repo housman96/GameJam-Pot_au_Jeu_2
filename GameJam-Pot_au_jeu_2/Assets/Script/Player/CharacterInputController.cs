@@ -9,16 +9,21 @@ public class CharacterInputController : MonoBehaviour
     public bool isPlayer = false;
     public float speed;
     private bool isInAnimation = false;
-    private Stack<Noeud> stack = new Stack<Noeud>();
+    [HideInInspector] public Stack<Noeud> stack = new Stack<Noeud>();
     private float animationDuration;
     private Vector3 targetAnimation;
     private Vector3 scaleAnimation;
     private float speedAnimation;
     private float speedScale;
     private float lastTime;
+    public bool isIA = false;
 
     private CharacterAnimationController animationController;
     private bool isLocked;
+
+
+	public bool isPlayerOne;
+
 
     // Use this for initialization
     void Start()
@@ -38,8 +43,7 @@ public class CharacterInputController : MonoBehaviour
 
 
         //si on est dans une animation
-        if (isInAnimation)
-        {
+		if (isInAnimation) {
             //on déplace le personnage vers targetAnimation à la vitesse de speedAnimation
 
             float step = speedAnimation * lastUpdateDeltaTime;
@@ -49,27 +53,18 @@ public class CharacterInputController : MonoBehaviour
             Vector2 translation = newPositon - transform.position;
 
 
-            if (Mathf.Abs(translation.x) > Mathf.Abs(translation.y))
-            {
+			if (Mathf.Abs(translation.x) > Mathf.Abs(translation.y)) {
                 input.y = 0;
-                if (translation.x > 0)
-                {
+				if (translation.x > 0) {
                     input.x = 1;
-                }
-                else
-                {
+				} else {
                     input.x = -1;
                 }
-            }
-            else
-            {
+			} else {
                 input.x = 0;
-                if (translation.y > 0)
-                {
+				if (translation.y > 0) {
                     input.y = 1;
-                }
-                else
-                {
+				} else {
                     input.y = -1;
                 }
             }
@@ -78,38 +73,37 @@ public class CharacterInputController : MonoBehaviour
             transform.localScale = Vector3.MoveTowards(transform.localScale, scaleAnimation, stepScale);
             transform.position = newPositon;
 
-
-            if (transform.position == targetAnimation && transform.localScale == scaleAnimation)
-            {
-                if (stack.Count == 0)
-                {
+			if (transform.position == targetAnimation && transform.localScale == scaleAnimation) {
+				if (stack.Count == 0) {
                     isInAnimation = false;
-                }
-                else
-                {
+				} else {
                     targetAnimation = stack.Pop().position;
                     speedAnimation = Vector3.Distance(transform.position, targetAnimation) / animationDuration;
                 }
 
             }
-
-
-
-
-        }
-        else
-        {
+		} else {
             //si on est un joueur
-            if (isPlayer && !isLocked)
-            {
+			if (isPlayer && !isLocked) {
+				if (isPlayerOne) {
                 //on récupére les inputs
-                input.x = Input.GetAxis("Horizontal");
-                input.y = Input.GetAxis("Vertical");
 
-                if (Input.GetButton("Action"))
-                {
+					input.x = Input.GetAxis("P1_Horizontal");
+					input.y = Input.GetAxis("P1_Vertical");
+
+					if (Input.GetButton("P1_Action")) {
                     animationController.sword(input.x, input.y);
                 }
+				} else {
+					//on récupére les inputs
+					input.x = Input.GetAxis("P2_Horizontal");
+					input.y = Input.GetAxis("P2_Vertical");
+
+					if (Input.GetButton("P2_Action")) {
+						animationController.sword(input.x, input.y);
+					}
+				}
+
 
                 Vector2 translation = new Vector3(input.x * lastUpdateDeltaTime * speed, input.y * lastUpdateDeltaTime * speed);
 
@@ -118,7 +112,7 @@ public class CharacterInputController : MonoBehaviour
             }
         }
 
-        if (animationController != null)
+        if (animationController != null && !isIA)
         {
             animationController.input = input;
         }
@@ -138,8 +132,7 @@ public class CharacterInputController : MonoBehaviour
     //animation de marche jusqu'au point target en time temps 
     public void moveToward(Stack<Noeud> stack)
     {
-        if (stack != null && stack.Count != 0)
-        {
+		if (stack != null && stack.Count != 0) {
             isInAnimation = true;
             targetAnimation = stack.Pop().position;
             this.stack = stack;
@@ -180,12 +173,11 @@ public class CharacterInputController : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (isInAnimation)
-        {
 
-            stack.Clear();
-            targetAnimation = transform.position;
-            isInAnimation = false;
+		if (isInAnimation) {
+            //stack.Clear();
+            //targetAnimation = transform.position;
+            //isInAnimation = false;
         }
     }
 }

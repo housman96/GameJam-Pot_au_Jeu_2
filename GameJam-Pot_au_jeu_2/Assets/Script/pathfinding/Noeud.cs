@@ -94,4 +94,12 @@ public class Noeud : IComparable<Noeud>
 
         return res;
     }
+
+    public void drawNoeud()
+    {
+        Debug.DrawLine(new Vector3(position.x - halfSize, position.y - halfSize), new Vector3(position.x + halfSize, position.y - halfSize), Color.black, 10f);
+        Debug.DrawLine(new Vector3(position.x + halfSize, position.y - halfSize), new Vector3(position.x + halfSize, position.y + halfSize), Color.black, 10f);
+        Debug.DrawLine(new Vector3(position.x + halfSize, position.y + halfSize), new Vector3(position.x - halfSize, position.y + halfSize), Color.black, 10f);
+        Debug.DrawLine(new Vector3(position.x - halfSize, position.y + halfSize), new Vector3(position.x - halfSize, position.y - halfSize), Color.black, 10f);
+    }
 }

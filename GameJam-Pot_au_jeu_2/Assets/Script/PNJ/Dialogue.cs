@@ -10,6 +10,22 @@ public class Dialogue : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		GenerateNewDialogues();
+	}
+
+	// Update is called once per frame
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			foreach (GameObject villager in aliveVillagers) {
+				villager.GetComponent<Villager>().Print();
+			}
+		}
+	}
+
+
+	public void GenerateNewDialogues()
+	{
 		aliveVillagers = GameObject.FindGameObjectsWithTag("Villager");
 		Shuffle(aliveVillagers);
 
@@ -20,22 +36,9 @@ public class Dialogue : MonoBehaviour
 			current.villagerToTalk2 = aliveVillagers[(i + 2) % numVillagers].GetComponent<Villager>();
 			current.villagerToTalk3 = aliveVillagers[(i + 3) % numVillagers].GetComponent<Villager>();
 		}
-
-
 	}
 
-	// Update is called once per frame
-	void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.Space)) {
-			foreach (GameObject villager in aliveVillagers) {
-				Debug.Log("=================");
-				villager.GetComponent<Villager>().Print();
-			}
-		}
-	}
-
-	void Shuffle(GameObject[] array)
+	private void Shuffle(GameObject[] array)
 	{
 		for (int t = 0; t < array.Length; t++) {
 			GameObject tmp = array[t];
