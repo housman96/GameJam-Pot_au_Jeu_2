@@ -24,102 +24,107 @@ public class CharacterEnabler : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-        name = character.name;
-        gameObject.name = name;
+        changeSkin(gameObject, character);
+    }
 
-        if (character.body)
+    public void changeSkin(GameObject player, Character skin)
+    {
+        name = skin.name;
+        player.name = name;
+
+        if (skin.body)
         {
-            body.GetComponent<Animator>().runtimeAnimatorController = character.body.GetComponent<Animator>().runtimeAnimatorController;
+            body.GetComponent<Animator>().runtimeAnimatorController = skin.body.GetComponent<Animator>().runtimeAnimatorController;
         }
         else
         {
             body.GetComponent<Animator>().runtimeAnimatorController = null;
         }
 
-        if (character.eyes)
+        if (skin.eyes)
         {
-            eyes.GetComponent<Animator>().runtimeAnimatorController = character.eyes.GetComponent<Animator>().runtimeAnimatorController;
+            eyes.GetComponent<Animator>().runtimeAnimatorController = skin.eyes.GetComponent<Animator>().runtimeAnimatorController;
         }
         else
         {
             eyes.GetComponent<Animator>().runtimeAnimatorController = null;
         }
 
-        if (character.chest)
+        if (skin.chest)
         {
-            chest.GetComponent<Animator>().runtimeAnimatorController = character.chest.GetComponent<Animator>().runtimeAnimatorController;
+            chest.GetComponent<Animator>().runtimeAnimatorController = skin.chest.GetComponent<Animator>().runtimeAnimatorController;
         }
         else
         {
             chest.GetComponent<Animator>().runtimeAnimatorController = null;
         }
 
-        if (character.arms)
+        if (skin.arms)
         {
-            arms.GetComponent<Animator>().runtimeAnimatorController = character.arms.GetComponent<Animator>().runtimeAnimatorController;
+            arms.GetComponent<Animator>().runtimeAnimatorController = skin.arms.GetComponent<Animator>().runtimeAnimatorController;
         }
         else
         {
             arms.GetComponent<Animator>().runtimeAnimatorController = null;
         }
 
-        if (character.pant)
+        if (skin.pant)
         {
-            pant.GetComponent<Animator>().runtimeAnimatorController = character.pant.GetComponent<Animator>().runtimeAnimatorController;
+            pant.GetComponent<Animator>().runtimeAnimatorController = skin.pant.GetComponent<Animator>().runtimeAnimatorController;
         }
         else
         {
             pant.GetComponent<Animator>().runtimeAnimatorController = null;
         }
 
-        if (character.shoes)
+        if (skin.shoes)
         {
-            shoes.GetComponent<Animator>().runtimeAnimatorController = character.shoes.GetComponent<Animator>().runtimeAnimatorController;
+            shoes.GetComponent<Animator>().runtimeAnimatorController = skin.shoes.GetComponent<Animator>().runtimeAnimatorController;
         }
         else
         {
             shoes.GetComponent<Animator>().runtimeAnimatorController = null;
         }
 
-        if (character.hands)
+        if (skin.hands)
         {
-            hands.GetComponent<Animator>().runtimeAnimatorController = character.hands.GetComponent<Animator>().runtimeAnimatorController;
+            hands.GetComponent<Animator>().runtimeAnimatorController = skin.hands.GetComponent<Animator>().runtimeAnimatorController;
         }
         else
         {
             hands.GetComponent<Animator>().runtimeAnimatorController = null;
         }
 
-        if (character.hair)
+        if (skin.hair)
         {
-            hair.GetComponent<Animator>().runtimeAnimatorController = character.hair.GetComponent<Animator>().runtimeAnimatorController;
+            hair.GetComponent<Animator>().runtimeAnimatorController = skin.hair.GetComponent<Animator>().runtimeAnimatorController;
         }
         else
         {
             hair.GetComponent<Animator>().runtimeAnimatorController = null;
         }
 
-        if (character.weapon)
+        if (skin.weapon)
         {
-            weapon.GetComponent<Animator>().runtimeAnimatorController = character.weapon.GetComponent<Animator>().runtimeAnimatorController;
+            weapon.GetComponent<Animator>().runtimeAnimatorController = skin.weapon.GetComponent<Animator>().runtimeAnimatorController;
         }
         else
         {
             weapon.GetComponent<Animator>().runtimeAnimatorController = null;
         }
 
-        if (character.hat)
+        if (skin.hat)
         {
-            hat.GetComponent<Animator>().runtimeAnimatorController = character.hat.GetComponent<Animator>().runtimeAnimatorController;
+            hat.GetComponent<Animator>().runtimeAnimatorController = skin.hat.GetComponent<Animator>().runtimeAnimatorController;
         }
         else
         {
             hat.GetComponent<Animator>().runtimeAnimatorController = null;
         }
 
-        if (character.nose)
+        if (skin.nose)
         {
-            nose.GetComponent<Animator>().runtimeAnimatorController = character.nose.GetComponent<Animator>().runtimeAnimatorController;
+            nose.GetComponent<Animator>().runtimeAnimatorController = skin.nose.GetComponent<Animator>().runtimeAnimatorController;
         }
         else
         {
@@ -138,5 +143,6 @@ public class CharacterEnabler : MonoBehaviour
         weapon.GetComponent<SpriteRenderer>().sortingOrder = 3;
         hat.GetComponent<SpriteRenderer>().sortingOrder = 4;
         nose.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
     }
 }
