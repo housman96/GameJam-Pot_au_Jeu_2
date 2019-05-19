@@ -10,18 +10,7 @@ public class Dialogue : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		aliveVillagers = GameObject.FindGameObjectsWithTag("Villager");
-		Shuffle(aliveVillagers);
-
-		int numVillagers = aliveVillagers.Length;
-		for (int i = 0; i < numVillagers; i++) {
-			Villager current = aliveVillagers[i].GetComponent<Villager>();
-			current.villagerToTalk1 = aliveVillagers[(i + 1) % numVillagers].GetComponent<Villager>();
-			current.villagerToTalk2 = aliveVillagers[(i + 2) % numVillagers].GetComponent<Villager>();
-			current.villagerToTalk3 = aliveVillagers[(i + 3) % numVillagers].GetComponent<Villager>();
-		}
-
-
+		GenerateNewDialogues();
 	}
 
 	// Update is called once per frame
@@ -36,7 +25,22 @@ public class Dialogue : MonoBehaviour
 		}
 	}
 
-	void Shuffle(GameObject[] array)
+
+	public void GenerateNewDialogues()
+	{
+		aliveVillagers = GameObject.FindGameObjectsWithTag("Villager");
+		Shuffle(aliveVillagers);
+
+		int numVillagers = aliveVillagers.Length;
+		for (int i = 0; i < numVillagers; i++) {
+			Villager current = aliveVillagers[i].GetComponent<Villager>();
+			current.villagerToTalk1 = aliveVillagers[(i + 1) % numVillagers].GetComponent<Villager>();
+			current.villagerToTalk2 = aliveVillagers[(i + 2) % numVillagers].GetComponent<Villager>();
+			current.villagerToTalk3 = aliveVillagers[(i + 3) % numVillagers].GetComponent<Villager>();
+		}
+	}
+
+	private void Shuffle(GameObject[] array)
 	{
 		for (int t = 0; t < array.Length; t++) {
 			GameObject tmp = array[t];
