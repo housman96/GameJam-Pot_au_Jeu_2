@@ -130,7 +130,6 @@ GameObject:
   m_Component:
   - component: {fileID: 85451235}
   - component: {fileID: 85451234}
-  - component: {fileID: 85451236}
   m_Layer: 0
   m_Name: Villager
   m_TagString: Villager
@@ -169,18 +168,125 @@ Transform:
   m_Father: {fileID: 1405572156}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &85451236
-MonoBehaviour:
+--- !u!1001 &137903767
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 85451233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac330912e51d95043bb18e9204d13119, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7169373730941979036, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: m_Name
+      value: NPCInitializer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169373730941979026, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: villagers.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: houses.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: villagers.Array.data[0]
+      value: 
+      objectReference: {fileID: 85451233}
+    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: villagers.Array.data[1]
+      value: 
+      objectReference: {fileID: 854825985}
+    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: villagers.Array.data[2]
+      value: 
+      objectReference: {fileID: 606532730}
+    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: villagers.Array.data[3]
+      value: 
+      objectReference: {fileID: 1146482376}
+    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: houses.Array.data[0]
+      value: 
+      objectReference: {fileID: 548531116}
+    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: houses.Array.data[1]
+      value: 
+      objectReference: {fileID: 1747839274}
+    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: houses.Array.data[2]
+      value: 
+      objectReference: {fileID: 1315270712}
+    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+        type: 3}
+      propertyPath: houses.Array.data[3]
+      value: 
+      objectReference: {fileID: 1638962378}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ede08329dddf4b499f48a5c1e6b45f8, type: 3}
 --- !u!1 &496643687
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +319,7 @@ Transform:
   - {fileID: 1315270713}
   - {fileID: 1638962379}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &548531116
 GameObject:
@@ -566,7 +672,7 @@ Transform:
   - {fileID: 606532731}
   - {fileID: 1146482377}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1638962378
 GameObject:
@@ -660,56 +766,3 @@ MonoBehaviour:
   size: 1
   door: 0
   deco: 0
---- !u!1 &1855827540
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1855827542}
-  - component: {fileID: 1855827541}
-  m_Layer: 0
-  m_Name: NPCInitializer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1855827541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855827540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df816d7c5e89c8842994db715712c640, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  villagers:
-  - {fileID: 85451233}
-  - {fileID: 854825985}
-  - {fileID: 606532730}
-  - {fileID: 1146482376}
-  houses:
-  - {fileID: 548531116}
-  - {fileID: 1747839274}
-  - {fileID: 1315270712}
-  - {fileID: 1638962378}
---- !u!4 &1855827542
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855827540}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
