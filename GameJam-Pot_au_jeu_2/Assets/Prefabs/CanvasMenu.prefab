@@ -1885,7 +1885,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "J1                                                                                                          J2\ndeplacement
     : ZQSD                                                     deplacement : \u2191
-    \u2190 \u2193 \u2192 \nattaque :  E                                                                      attaque
+    \u2190 \u2193 \u2192 \nInteragir :  E                                                                      Interagir
     : Maj droit"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c45b94659876cc48a51774d71e3258b, type: 2}
@@ -1915,8 +1915,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 13
+  m_fontSizeBase: 13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1932,7 +1932,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 111
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1956,7 +1956,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 566326588607070572}
-    characterCount: 306
+    characterCount: 310
     spriteCount: 0
     spaceCount: 245
     wordCount: 10
@@ -2252,8 +2252,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "Equipe : \nDylan DEMANGE, Ombeline LECLERC-ISTRIA, Theo QUERMENT, William
-    ZERBATO\n\n\nMerci a LPC pour ses assets graphiques, \nTheo HENRY, Nicolas MARTIN,
-    Claire MIELCAREK, & Julie MOUNIER pour leur soutien!"
+    ZERBATO\n\n\nMerci a LPC pour ses assets graphiques et \nTheo HENRY, Nicolas MARTIN,
+    Claire MIELCAREK, & Julie MOUNIER, notre Team Ravitaillement !"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c45b94659876cc48a51774d71e3258b, type: 2}
   m_sharedMaterial: {fileID: 6845156949642090237, guid: 4c45b94659876cc48a51774d71e3258b,
@@ -2299,7 +2299,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 126
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -2323,12 +2323,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 566326588988410524}
-    characterCount: 175
+    characterCount: 216
     spriteCount: 0
-    spaceCount: 29
-    wordCount: 24
+    spaceCount: 34
+    wordCount: 28
     linkCount: 0
-    lineCount: 6
+    lineCount: 11
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
