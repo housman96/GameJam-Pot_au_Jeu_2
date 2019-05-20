@@ -10,6 +10,9 @@ public class open_door : MonoBehaviour
     
     public GameObject camera;
 
+    public Slider chronoSlider;
+    public float chronoValue;
+
     bool trigger = false;
     bool isKilled = false;
 
@@ -33,6 +36,7 @@ public class open_door : MonoBehaviour
         Debug.Log(transform.parent.gameObject.GetComponent<House>());
         villager = transform.parent.gameObject.GetComponent<House>().villager.gameObject;
         Debug.Log("Villager: " + villager);
+        Debug.Log(chronoValue);
     }
     
     void OnTriggerExit2D(Collider2D other)
@@ -58,13 +62,16 @@ public class open_door : MonoBehaviour
         float p1 = Input.GetAxis("P1_Action");
         float p2 = Input.GetAxis("P2_Action");
 
-        if (trigger == true &&  isKilled == false && (p1 == 1 || p2 ==2))
+        chronoValue = chronoSlider.value;
+
+        if (trigger == true &&  isKilled == false && (p1 == 1 || p2 == 1) && chronoValue >= 13)
         {
             if (p1 == 1) { imageFondu = p1UI; } 
             else { imageFondu = p2UI; }
             Debug.Log("Trigger: " + trigger+" // P1: "+ p1+ " // P2: " + p2);
             isKilled = true;
             StartCoroutine("fadeOut");
+            gameManager.Instance.killVillager(player, villager);
         }
         
 
@@ -77,6 +84,13 @@ public class open_door : MonoBehaviour
             imageFondu.color = new Color(imageFondu.color.r, imageFondu.color.g, imageFondu.color.b, imageFondu.color.a + 0.01f);
             yield return new WaitForSeconds(0.01f);
         }
+        gameManager.Instance.teleportPlayer(player);
+
+        if (gameManager.Instance.p1HasKilled && gameManager.Instance.p2HasKilled)
+        {
+            gameManager.Instance.startNewRound();
+        }
+
         m_Renderer.sprite = BloodyDoor;
     }
 }

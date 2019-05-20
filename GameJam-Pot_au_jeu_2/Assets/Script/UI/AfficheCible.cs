@@ -54,8 +54,6 @@ public class AfficheCible : MonoBehaviour
             target3Done.gameObject.SetActive(true);
         }
 
-
-
     }
 
 }

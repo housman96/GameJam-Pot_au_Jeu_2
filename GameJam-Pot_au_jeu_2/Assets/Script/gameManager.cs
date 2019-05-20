@@ -28,6 +28,8 @@ public class gameManager : MonoBehaviour
     private float spawnPosY;
 
     public GameObject deadVillager;
+    public bool p1HasKilled;
+    public bool p2HasKilled;
 
     public GameObject panelP1;
     public GameObject panelP2;
@@ -36,8 +38,11 @@ public class gameManager : MonoBehaviour
     public AudioClip yellingWolvesClip;
     public AudioClip morningClip;
 
+    public static gameManager Instance { get; set; }
+
     private void Start()
     {
+        Instance = this;
 
         for (int i = 0; i < playerList.Count; i++)
         {
@@ -64,7 +69,7 @@ public class gameManager : MonoBehaviour
                 randIndex2 = Random.Range(0, villagerList.Count);
                 randIndex3 = Random.Range(0, villagerList.Count);
 
-            } while (randIndex1 != randIndex2 && randIndex1 != randIndex3 && randIndex2 != randIndex3);
+            } while (randIndex1 == randIndex2 || randIndex1 == randIndex3 || randIndex2 == randIndex3);
 
             targets.Add(villagerList[randIndex1]);
             targets.Add(villagerList[randIndex2]);
@@ -99,10 +104,7 @@ public class gameManager : MonoBehaviour
         {
             foreach (GameObject player in playerList)
             {
-                spawnPosX = playersSpawn[player].transform.position.x;
-                spawnPosY = playersSpawn[player].transform.position.y;
-
-                player.transform.position = new Vector3(spawnPosX, spawnPosY, 0);
+                teleportPlayer(player);
 
                 player.gameObject.GetComponent<CharacterEnabler>().changeSkin(player, skinWerewolf);
                 
@@ -113,10 +115,7 @@ public class gameManager : MonoBehaviour
         {
             foreach (GameObject player in playerList)
             {
-                spawnPosX = playersSpawn[player].transform.position.x;
-                spawnPosY = playersSpawn[player].transform.position.y;
-
-                player.transform.position = new Vector3(spawnPosX, spawnPosY, 0);
+                teleportPlayer(player);
 
                 player.gameObject.GetComponent<CharacterEnabler>().changeSkin(player, playersSkin[player]);
             }
@@ -146,5 +145,37 @@ public class gameManager : MonoBehaviour
         listener.Play();
         yield return new WaitUntil(() => !listener.isPlaying);
         Destroy(listener);
+    }
+
+    public void killVillager(GameObject player, GameObject villager)
+    {
+        deadVillager = villager;
+        deadVillager.SetActive(false);
+        
+        if(player.tag == "Player1")
+        {
+            panelP1.GetComponent<AfficheCible>().AfficherLaMort(villager);
+            p1HasKilled = true;
+        }
+        else if(player.tag == "Player2")
+        {
+            panelP2.GetComponent<AfficheCible>().AfficherLaMort(villager);
+            p2HasKilled = true;
+        }
+    }
+
+    public void teleportPlayer(GameObject player)
+    {
+        spawnPosX = playersSpawn[player].transform.position.x;
+        spawnPosY = playersSpawn[player].transform.position.y;
+
+        player.transform.position = new Vector3(spawnPosX, spawnPosY, 0);
+    }
+
+    public void startNewRound()
+    {
+        chronoSlider.value = 0;
+        gameManager.Instance.p1HasKilled = false;
+        gameManager.Instance.p2HasKilled = false;
     }
 }
