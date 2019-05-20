@@ -44,8 +44,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df816d7c5e89c8842994db715712c640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  villagers: []
-  houses: []
+  villagers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  houses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &7169373730941979027
 MonoBehaviour:
   m_ObjectHideFlags: 0

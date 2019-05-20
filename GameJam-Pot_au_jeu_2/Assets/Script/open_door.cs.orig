@@ -73,7 +73,12 @@ public class open_door : MonoBehaviour
             Debug.Log("Trigger: " + trigger + " // P1: " + p1 + " // P2: " + p2);
             isKilled = true;
             StartCoroutine("fadeOut");
+<<<<<<< HEAD
+
             gameManager.Instance.killVillager(player, villager);
+=======
+			gameManager.Instance.killVillager(player, villager);
+>>>>>>> develop
         }
 
 
@@ -88,9 +93,19 @@ public class open_door : MonoBehaviour
         }
         gameManager.Instance.teleportPlayer(player);
 
-		if (player.tag == "Player1") {            PanelVillagerKillP1.GetComponent<KillText>().UpdateKillText(villager);
+<<<<<<< HEAD
+
+
+        if (player.tag == "Player1")
+        {
+            PanelVillagerKillP1.GetComponent<KillText>().UpdateKillText(villager);
             PanelVillagerKillP1.SetActive(true);
         }
+=======
+		if (gameManager.Instance.p1HasKilled && gameManager.Instance.p2HasKilled) {
+			StartCoroutine(gameManager.Instance.startNewRound());
+		}
+>>>>>>> develop
 
         if (player.tag == "Player2")
         {
@@ -98,8 +113,13 @@ public class open_door : MonoBehaviour
             PanelVillagerKillP2.SetActive(true);
         }
 
+<<<<<<< HEAD
         m_Renderer.sprite = BloodyDoor;
+    }
+=======
+		m_Renderer.sprite = BloodyDoor;
 
 		
-    }
+	}
+>>>>>>> develop
 }

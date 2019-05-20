@@ -55,6 +55,8 @@ public class gameManager : MonoBehaviour
     public GameObject panelP1;
     public GameObject panelP2;
 
+	public Dialogue dialogue;
+
 
     public AudioClip yellingWolvesClip;
     public AudioClip morningClip;
@@ -255,7 +257,7 @@ public class gameManager : MonoBehaviour
         player.transform.position = new Vector3(spawnPosX, spawnPosY, 0);
     }
 
-    public void startNewRound()
+    public IEnumerator startNewRound()
     {
         StartCoroutine("startNewRoundEnum");
     }
@@ -266,5 +268,7 @@ public class gameManager : MonoBehaviour
         chronoSlider.value = 0;
         gameManager.Instance.p1HasKilled = false;
         gameManager.Instance.p2HasKilled = false;
+
+		dialogue.GenerateNewDialogues();
     }
 }

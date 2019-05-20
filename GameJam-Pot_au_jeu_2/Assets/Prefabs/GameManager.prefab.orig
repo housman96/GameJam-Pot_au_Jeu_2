@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5925418860763036253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5925418860763036243}
+  - component: {fileID: 5925418860763036252}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5925418860763036243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5925418860763036253}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -94.08, y: 1.95, z: -2.2269382}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5925418860763036252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5925418860763036253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4c1192c53edfa4f9b1c112907ab555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chronoSlider: {fileID: 0}
+  chasseur: {fileID: 5385107326837013262, guid: d0bc5744116aa0349a590f38392c95ce,
+    type: 3}
+  timeValue: 0
+  waypoints: {fileID: 2385556475086184293, guid: 488371e94f18bb542a3eefc907255ce8,
+    type: 3}
+  clipDay: {fileID: 8300000, guid: a2c79f60a2f55ed45a8a66978419685a, type: 3}
+  clipNight: {fileID: 8300000, guid: b635396e3b5515244a0c030100995092, type: 3}
+  dayPostProcess: {fileID: 11400000, guid: 76148d05d1f7ded48bddab0d5ea0f4be, type: 2}
+  nightPostProcess: {fileID: 11400000, guid: 43e6c1ed4896e524a99c3975e831a7f8, type: 2}
+  camera1: {fileID: 0}
+  camera2: {fileID: 0}
+  musicManager: {fileID: 0}
+  villagerList: []
+  targets: []
+  playerList:
+  - {fileID: 0}
+  - {fileID: 0}
+  spawnList:
+  - {fileID: 0}
+  - {fileID: 0}
+  skinList:
+  - {fileID: 11400000, guid: e60ce3aa9c506c343a09ab46ab36a15e, type: 2}
+  - {fileID: 11400000, guid: 04bb03c66e4784b4295c4edbfe28a738, type: 2}
+  skinWerewolf: {fileID: 11400000, guid: 1cb05530cec0ac54ba4be42d643dcc0c, type: 2}
+  deadVillager: {fileID: 0}
+  p1HasKilled: 0
+  p2HasKilled: 0
+  panelP1: {fileID: 0}
+  panelP2: {fileID: 0}
+<<<<<<< HEAD
+  yellingWolvesClip: {fileID: 8300000, guid: 0cba278791521d741ad7595741b3e675, type: 3}
+  morningClip: {fileID: 8300000, guid: 60e8dd896c4f48c4583c44d91e5f6a4f, type: 3}
+=======
+  dialogue: {fileID: 0}
+  yellingWolvesClip: {fileID: 0}
+  morningClip: {fileID: 0}
+>>>>>>> develop
