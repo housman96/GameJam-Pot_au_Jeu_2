@@ -2,13 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Pathfinding;
+using UnityEngine.PostProcessing;
 
 public class gameManager : MonoBehaviour
 {
     [SerializeField]
     public Slider chronoSlider;
 
+    public GameObject chasseur;
+
     public float timeValue;
+
+    public GameObject waypoints;
+
+    public AudioClip clipDay;
+    public AudioClip clipNight;
+
+
+    public PostProcessingProfile dayPostProcess;
+    public PostProcessingProfile nightPostProcess;
+
+    public PostProcessingBehaviour camera1;
+    public PostProcessingBehaviour camera2;
+
+    public MusicManager musicManager;
 
     public Dictionary<GameObject, int> scores = new Dictionary<GameObject, int>();
     public Dictionary<GameObject, GameObject> playersSpawn = new Dictionary<GameObject, GameObject>();
@@ -17,6 +35,9 @@ public class gameManager : MonoBehaviour
 
     public List<GameObject> villagerList;
     public List<GameObject> targets = new List<GameObject>();
+
+    private List<Vector3> startVillagerPosition = new List<Vector3>();
+    private List<GameObject> listChasseur = new List<GameObject>();
 
     public List<GameObject> playerList;
     public List<GameObject> spawnList;
@@ -34,14 +55,20 @@ public class gameManager : MonoBehaviour
     public GameObject panelP1;
     public GameObject panelP2;
 
+    public Dialogue dialogue;
+
 
     public AudioClip yellingWolvesClip;
     public AudioClip morningClip;
 
+    private bool songDay = false;
+
+    private float deathNumer = 0;
     public static gameManager Instance { get; set; }
 
     private void Start()
     {
+        musicManager.setTargetVolume(0.75f);
         Instance = this;
 
         for (int i = 0; i < playerList.Count; i++)
@@ -52,12 +79,13 @@ public class gameManager : MonoBehaviour
 
         GameObject[] temp = GameObject.FindGameObjectsWithTag("Villager");
 
-        foreach(GameObject villager in temp)
+        foreach (GameObject villager in temp)
         {
             villagerList.Add(villager);
-    }
+            startVillagerPosition.Add(villager.transform.position);
+        }
 
-        foreach(GameObject player in playerList)
+        foreach (GameObject player in playerList)
         {
             int randIndex1;
             int randIndex2;
@@ -98,6 +126,11 @@ public class gameManager : MonoBehaviour
 
     private void Update()
     {
+        if (gameManager.Instance.p1HasKilled && gameManager.Instance.p2HasKilled)
+        {
+            gameManager.Instance.startNewRound();
+        }
+
         timeValue = chronoSlider.value;
 
         if (timeValue >= 12 && timeValue <= 12.25)
@@ -107,9 +140,40 @@ public class gameManager : MonoBehaviour
                 teleportPlayer(player);
 
                 player.gameObject.GetComponent<CharacterEnabler>().changeSkin(player, skinWerewolf);
-                
+
             }
-			StartCoroutine("yellingWolves");
+            deathNumer = 0;
+            for (int i = 0; i < villagerList.Count; i++)
+            {
+                if (villagerList[i].activeSelf)
+                {
+                    villagerList[i].transform.position = new Vector2(500 + i, 500 + i);
+                    villagerList[i].GetComponent<IAPNJjour>().enabled = false;
+                    villagerList[i].GetComponent<AILerp>().enabled = false;
+                }
+                else
+                {
+                    deathNumer++;
+                }
+            }
+
+
+
+            if (songDay)
+            {
+                camera1.profile = nightPostProcess;
+                camera2.profile = nightPostProcess;
+                musicManager.setMusicOn(clipNight, 1);
+                StartCoroutine("yellingWolves");
+                songDay = false;
+
+                for (int i = 0; i < Mathf.Min(12, deathNumer + 4); i++)
+                {
+                    GameObject newChasseur = (Instantiate(chasseur, startVillagerPosition[i], Quaternion.identity));
+                    listChasseur.Add(newChasseur);
+                    newChasseur.GetComponent<IAChasseur>().waypoints = waypoints;
+                }
+            }
         }
         else if (timeValue >= 0 && timeValue <= 0.25)
         {
@@ -118,8 +182,37 @@ public class gameManager : MonoBehaviour
                 teleportPlayer(player);
 
                 player.gameObject.GetComponent<CharacterEnabler>().changeSkin(player, playersSkin[player]);
+
+                player.GetComponent<AILerp>().enabled = false;
+
+                player.GetComponent<CharacterInputController>().enabled = true;
+                player.GetComponent<Fuite>().isInFuite = false;
+                player.GetComponent<BoxCollider2D>().enabled = true;
             }
-            StartCoroutine("morning");
+            for (int i = 0; i < villagerList.Count; i++)
+            {
+                villagerList[i].transform.position = startVillagerPosition[i];
+                villagerList[i].GetComponent<IAPNJjour>().enabled = true;
+                villagerList[i].GetComponent<AILerp>().enabled = true;
+            }
+            if (!songDay)
+            {
+
+
+                musicManager.setMusicOn(clipDay, 1);
+                camera1.profile = dayPostProcess;
+                camera2.profile = dayPostProcess;
+                foreach (GameObject chasseur in listChasseur)
+                {
+                    DestroyImmediate(chasseur);
+
+                }
+                listChasseur.Clear();
+
+                songDay = true;
+                StartCoroutine("morning");
+            }
+
         }
     }
 
@@ -151,13 +244,13 @@ public class gameManager : MonoBehaviour
     {
         deadVillager = villager;
         deadVillager.SetActive(false);
-        
-        if(player.tag == "Player1")
+
+        if (player.tag == "Player1")
         {
             panelP1.GetComponent<AfficheCible>().AfficherLaMort(villager);
             p1HasKilled = true;
         }
-        else if(player.tag == "Player2")
+        else if (player.tag == "Player2")
         {
             panelP2.GetComponent<AfficheCible>().AfficherLaMort(villager);
             p2HasKilled = true;
@@ -174,8 +267,16 @@ public class gameManager : MonoBehaviour
 
     public void startNewRound()
     {
+        StartCoroutine("startNewRoundEnum");
+    }
+
+    public IEnumerator startNewRoundEnum()
+    {
+        yield return new WaitForSeconds(5f);
         chronoSlider.value = 0;
         gameManager.Instance.p1HasKilled = false;
         gameManager.Instance.p2HasKilled = false;
+
+        dialogue.GenerateNewDialogues();
     }
 }

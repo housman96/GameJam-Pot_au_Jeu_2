@@ -59,6 +59,7 @@ public class Fuite : MonoBehaviour
 
     public IEnumerator fadeOut()
     {
+        //yield return new WaitForSeconds(0.5f);
         while (imageFondu.color.a < 1)
         {
             imageFondu.color = new Color(imageFondu.color.r, imageFondu.color.g, imageFondu.color.b, imageFondu.color.a + 0.01f);
@@ -73,7 +74,7 @@ public class Fuite : MonoBehaviour
         listener.playOnAwake = false;
         listener.clip = cryClip;
         listener.loop = false;
-        listener.volume = 0.4f;
+        listener.volume = 0.75f;
         listener.Play();
         yield return new WaitUntil(() => !listener.isPlaying);
         Destroy(listener);

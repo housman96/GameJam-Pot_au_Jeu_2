@@ -73,5 +73,11 @@ MonoBehaviour:
   p2HasKilled: 0
   panelP1: {fileID: 0}
   panelP2: {fileID: 0}
+<<<<<<< HEAD
   yellingWolvesClip: {fileID: 8300000, guid: 0cba278791521d741ad7595741b3e675, type: 3}
   morningClip: {fileID: 8300000, guid: 60e8dd896c4f48c4583c44d91e5f6a4f, type: 3}
+=======
+  dialogue: {fileID: 0}
+  yellingWolvesClip: {fileID: 0}
+  morningClip: {fileID: 0}
+>>>>>>> develop
