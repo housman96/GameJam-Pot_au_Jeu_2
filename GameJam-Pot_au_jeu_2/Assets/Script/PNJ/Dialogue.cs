@@ -16,16 +16,18 @@ public class Dialogue : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Space)) {
-			foreach (GameObject villager in aliveVillagers) {
-				villager.GetComponent<Villager>().Print();
-			}
-		}
+		//if (Input.GetKeyDown(KeyCode.Space)) {
+		//	foreach (GameObject villager in aliveVillagers) {
+		//		villager.GetComponent<Villager>().Print();
+		//	}
+		//}
 	}
 
 
 	public void GenerateNewDialogues()
 	{
+		Debug.Log("new dialogues");
+
 		aliveVillagers = GameObject.FindGameObjectsWithTag("Villager");
 		Shuffle(aliveVillagers);
 

@@ -75,6 +75,11 @@ public class IAChasseur : MonoBehaviour
         playerToAttack.GetComponent<Fuite>().launchFuite();
         isAttacking = false;
         isPlayerNear = false;
+        //yield return new WaitForSeconds(4f);
+        if (playerToAttack.tag == "Player1")
+            gameManager.Instance.p1HasKilled = true;
+        if (playerToAttack.tag == "Player2")
+            gameManager.Instance.p2HasKilled = true;
     }
 
     public void pickNewCurrentWaypoint()
