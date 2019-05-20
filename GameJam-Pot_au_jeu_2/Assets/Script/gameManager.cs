@@ -32,6 +32,8 @@ public class gameManager : MonoBehaviour
     public AudioClip yellingWolvesClip;
     public AudioClip morningClip;
 
+
+
     private void Start()
     {
 
