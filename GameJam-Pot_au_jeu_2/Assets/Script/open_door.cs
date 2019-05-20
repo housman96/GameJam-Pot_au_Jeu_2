@@ -7,7 +7,7 @@ public class open_door : MonoBehaviour
 {
     // Start is called before the first frame update
     public Sprite BloodyDoor;
-    
+
     public GameObject camera;
 
     public Slider chronoSlider;
@@ -25,11 +25,11 @@ public class open_door : MonoBehaviour
     GameObject villager;
     GameObject player;
 
-	public GameObject PanelVillagerKillP1;
-	public GameObject PanelVillagerKillP2;
+    public GameObject PanelVillagerKillP1;
+    public GameObject PanelVillagerKillP2;
 
 
-	void OnTriggerEnter2D (Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("TrigerEnter");
         trigger = true;
@@ -40,7 +40,7 @@ public class open_door : MonoBehaviour
         Debug.Log("Villager: " + villager);
         Debug.Log(chronoValue);
     }
-    
+
     void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log("TrigerExit");
@@ -66,17 +66,17 @@ public class open_door : MonoBehaviour
 
         chronoValue = chronoSlider.value;
 
-        if (trigger == true &&  isKilled == false && (p1 == 1 || p2 == 1) && chronoValue >= 13)
+        if (trigger == true && isKilled == false && (p1 == 1 || p2 == 1) && chronoValue >= 13)
         {
-            if (p1 == 1) { imageFondu = p1UI; } 
+            if (p1 == 1) { imageFondu = p1UI; }
             else { imageFondu = p2UI; }
-            Debug.Log("Trigger: " + trigger+" // P1: "+ p1+ " // P2: " + p2);
+            Debug.Log("Trigger: " + trigger + " // P1: " + p1 + " // P2: " + p2);
             isKilled = true;
             StartCoroutine("fadeOut");
 
-			gameManager.Instance.killVillager(player, villager);
+            gameManager.Instance.killVillager(player, villager);
         }
-        
+
 
     }
 
@@ -89,21 +89,20 @@ public class open_door : MonoBehaviour
         }
         gameManager.Instance.teleportPlayer(player);
 
-        if (gameManager.Instance.p1HasKilled && gameManager.Instance.p2HasKilled)
+
+
+        if (player.tag == "Player1")
         {
-            gameManager.Instance.startNewRound();
+            PanelVillagerKillP1.GetComponent<KillText>().UpdateKillText(villager);
+            PanelVillagerKillP1.SetActive(true);
         }
 
-		if (player.tag == "Player1") {
-			PanelVillagerKillP1.GetComponent<KillText>().UpdateKillText(villager);
-			PanelVillagerKillP1.SetActive(true);
-		}
+        if (player.tag == "Player2")
+        {
+            PanelVillagerKillP2.GetComponent<KillText>().UpdateKillText(villager);
+            PanelVillagerKillP2.SetActive(true);
+        }
 
-		if (player.tag == "Player2") {
-			PanelVillagerKillP2.GetComponent<KillText>().UpdateKillText(villager);
-			PanelVillagerKillP2.SetActive(true);
-		}
-
-		m_Renderer.sprite = BloodyDoor;
+        m_Renderer.sprite = BloodyDoor;
     }
 }

@@ -61,6 +61,10 @@ public class MusicManager : MonoBehaviour
         targetVolume = volume;
     }
 
+    public void setMusicOn(AudioClip clip, float time)
+    {
+        StartCoroutine(setMusic(clip, time));
+    }
 
     //Coroutine which change the music with a fade out and a fade in
     public IEnumerator setMusic(AudioClip clip, float time)
