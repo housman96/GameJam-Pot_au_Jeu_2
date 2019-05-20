@@ -55,7 +55,7 @@ public class gameManager : MonoBehaviour
     public GameObject panelP1;
     public GameObject panelP2;
 
-	public Dialogue dialogue;
+    public Dialogue dialogue;
 
 
     public AudioClip yellingWolvesClip;
@@ -182,6 +182,12 @@ public class gameManager : MonoBehaviour
                 teleportPlayer(player);
 
                 player.gameObject.GetComponent<CharacterEnabler>().changeSkin(player, playersSkin[player]);
+
+                player.GetComponent<AILerp>().enabled = false;
+
+                player.GetComponent<CharacterInputController>().enabled = true;
+                player.GetComponent<Fuite>().isInFuite = false;
+                player.GetComponent<BoxCollider2D>().enabled = true;
             }
             for (int i = 0; i < villagerList.Count; i++)
             {
@@ -191,6 +197,8 @@ public class gameManager : MonoBehaviour
             }
             if (!songDay)
             {
+
+
                 musicManager.setMusicOn(clipDay, 1);
                 camera1.profile = dayPostProcess;
                 camera2.profile = dayPostProcess;
@@ -257,18 +265,18 @@ public class gameManager : MonoBehaviour
         player.transform.position = new Vector3(spawnPosX, spawnPosY, 0);
     }
 
-    public IEnumerator startNewRound()
+    public void startNewRound()
     {
         StartCoroutine("startNewRoundEnum");
     }
 
     public IEnumerator startNewRoundEnum()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         chronoSlider.value = 0;
         gameManager.Instance.p1HasKilled = false;
         gameManager.Instance.p2HasKilled = false;
 
-		dialogue.GenerateNewDialogues();
+        dialogue.GenerateNewDialogues();
     }
 }

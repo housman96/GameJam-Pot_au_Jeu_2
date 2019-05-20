@@ -570,6 +570,21 @@ PrefabInstance:
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6861645689898804692, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861645689898804692, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1021430054481238077, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9,
+        type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 903266131773128496, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9,
         type: 3}
       propertyPath: timeDivider
@@ -1949,6 +1964,18 @@ MonoBehaviour:
   villagerToTalk1: {fileID: 0}
   villagerToTalk2: {fileID: 0}
   villagerToTalk3: {fileID: 0}
+--- !u!114 &1869793208 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7169373730941979027, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2046810484}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac330912e51d95043bb18e9204d13119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1979602093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3298,5 +3325,15 @@ PrefabInstance:
       propertyPath: musicManager
       value: 
       objectReference: {fileID: 612093989}
+    - target: {fileID: 5925418860763036252, guid: d49290f4d03f7ae4fbd9509fa7885f81,
+        type: 3}
+      propertyPath: deadVillager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5925418860763036252, guid: d49290f4d03f7ae4fbd9509fa7885f81,
+        type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 1869793208}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d49290f4d03f7ae4fbd9509fa7885f81, type: 3}
