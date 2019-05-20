@@ -74,7 +74,7 @@ MonoBehaviour:
   repathRate: Infinity
   canSearch: 1
   canMove: 1
-  speed: 4
+  speed: 2
   orientation: 1
   enableRotation: 0
   rotationSpeed: 0
@@ -97,6 +97,10 @@ MonoBehaviour:
   animationController: {fileID: 3340858586754518296}
   destinationSetter: {fileID: 900364515}
   lerp: {fileID: 900364516}
+  PanelP1: {fileID: 0}
+  PanelP2: {fileID: 0}
+  TextP1: {fileID: 0}
+  TextP2: {fileID: 0}
 --- !u!1001 &6663260846230379945
 PrefabInstance:
   m_ObjectHideFlags: 0

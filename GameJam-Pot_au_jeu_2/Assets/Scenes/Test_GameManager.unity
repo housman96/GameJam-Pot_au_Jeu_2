@@ -540,17 +540,9 @@ PrefabInstance:
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 235156082, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1721064863, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 235156084, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9, type: 3}
-      propertyPath: m_Color.a
-      value: 0.73333335
       objectReference: {fileID: 0}
     - target: {fileID: 1721064866, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9, type: 3}
       propertyPath: m_Color.a
@@ -576,6 +568,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 235156082, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 235156084, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9, type: 3}
+      propertyPath: m_Color.a
+      value: 0.73333335
+      objectReference: {fileID: 0}
     - target: {fileID: 483638482, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9, type: 3}
       propertyPath: m_fontColor.r
       value: 0
@@ -595,6 +595,22 @@ PrefabInstance:
     - target: {fileID: 483638482, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9, type: 3}
       propertyPath: m_fontSizeBase
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1111611534, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 308556673, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 756680357, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 756680358, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9, type: 3}
+      propertyPath: m_textAlignment
+      value: 514
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9, type: 3}
@@ -634,6 +650,18 @@ MonoBehaviour:
   m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &341565250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 308556673, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9,
+    type: 3}
+  m_PrefabInstance: {fileID: 341565246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &341565251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1111611534, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9,
+    type: 3}
+  m_PrefabInstance: {fileID: 341565246}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &378374882 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2264660198760634664, guid: b843e985184f46b48b7930cab39550aa,
@@ -741,73 +769,182 @@ PrefabInstance:
       propertyPath: chronoSlider
       value: 
       objectReference: {fileID: 341565249}
+    - target: {fileID: 5824906172238197965, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP1
+      value: 
+      objectReference: {fileID: 341565251}
+    - target: {fileID: 5824906172238197965, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP2
+      value: 
+      objectReference: {fileID: 341565250}
     - target: {fileID: 5824906171086081354, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: chronoSlider
+      value: 
+      objectReference: {fileID: 341565249}
+    - target: {fileID: 5824906171086081354, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP1
+      value: 
+      objectReference: {fileID: 341565251}
+    - target: {fileID: 5824906171086081354, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP2
+      value: 
+      objectReference: {fileID: 341565250}
+    - target: {fileID: 5824906170949773431, guid: 6091d84c91142ef4d9ff625d9d230475,
         type: 3}
       propertyPath: chronoSlider
       value: 
       objectReference: {fileID: 341565249}
     - target: {fileID: 5824906170949773431, guid: 6091d84c91142ef4d9ff625d9d230475,
         type: 3}
+      propertyPath: PanelVillagerKillP1
+      value: 
+      objectReference: {fileID: 341565251}
+    - target: {fileID: 5824906170949773431, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP2
+      value: 
+      objectReference: {fileID: 341565250}
+    - target: {fileID: 5824906171753465554, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
       propertyPath: chronoSlider
       value: 
       objectReference: {fileID: 341565249}
     - target: {fileID: 5824906171753465554, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP1
+      value: 
+      objectReference: {fileID: 341565251}
+    - target: {fileID: 5824906171753465554, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP2
+      value: 
+      objectReference: {fileID: 341565250}
+    - target: {fileID: 9126447519974487575, guid: 6091d84c91142ef4d9ff625d9d230475,
         type: 3}
       propertyPath: chronoSlider
       value: 
       objectReference: {fileID: 341565249}
     - target: {fileID: 9126447519974487575, guid: 6091d84c91142ef4d9ff625d9d230475,
         type: 3}
+      propertyPath: PanelVillagerKillP1
+      value: 
+      objectReference: {fileID: 341565251}
+    - target: {fileID: 9126447519974487575, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP2
+      value: 
+      objectReference: {fileID: 341565250}
+    - target: {fileID: 9126447519000144146, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
       propertyPath: chronoSlider
       value: 
       objectReference: {fileID: 341565249}
     - target: {fileID: 9126447519000144146, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP1
+      value: 
+      objectReference: {fileID: 341565251}
+    - target: {fileID: 9126447519000144146, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP2
+      value: 
+      objectReference: {fileID: 341565250}
+    - target: {fileID: 9126447518904329044, guid: 6091d84c91142ef4d9ff625d9d230475,
         type: 3}
       propertyPath: chronoSlider
       value: 
       objectReference: {fileID: 341565249}
     - target: {fileID: 9126447518904329044, guid: 6091d84c91142ef4d9ff625d9d230475,
         type: 3}
+      propertyPath: PanelVillagerKillP1
+      value: 
+      objectReference: {fileID: 341565251}
+    - target: {fileID: 9126447518904329044, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP2
+      value: 
+      objectReference: {fileID: 341565250}
+    - target: {fileID: 9126447519529501614, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
       propertyPath: chronoSlider
       value: 
       objectReference: {fileID: 341565249}
     - target: {fileID: 9126447519529501614, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP1
+      value: 
+      objectReference: {fileID: 341565251}
+    - target: {fileID: 9126447519529501614, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP2
+      value: 
+      objectReference: {fileID: 341565250}
+    - target: {fileID: 1367635464108328488, guid: 6091d84c91142ef4d9ff625d9d230475,
         type: 3}
       propertyPath: chronoSlider
       value: 
       objectReference: {fileID: 341565249}
     - target: {fileID: 1367635464108328488, guid: 6091d84c91142ef4d9ff625d9d230475,
         type: 3}
+      propertyPath: PanelVillagerKillP1
+      value: 
+      objectReference: {fileID: 341565251}
+    - target: {fileID: 1367635464108328488, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP2
+      value: 
+      objectReference: {fileID: 341565250}
+    - target: {fileID: 1367635463433188492, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
       propertyPath: chronoSlider
       value: 
       objectReference: {fileID: 341565249}
     - target: {fileID: 1367635463433188492, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP1
+      value: 
+      objectReference: {fileID: 341565251}
+    - target: {fileID: 1367635463433188492, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP2
+      value: 
+      objectReference: {fileID: 341565250}
+    - target: {fileID: 1367635462987303260, guid: 6091d84c91142ef4d9ff625d9d230475,
         type: 3}
       propertyPath: chronoSlider
       value: 
       objectReference: {fileID: 341565249}
     - target: {fileID: 1367635462987303260, guid: 6091d84c91142ef4d9ff625d9d230475,
         type: 3}
-      propertyPath: chronoSlider
+      propertyPath: PanelVillagerKillP1
       value: 
-      objectReference: {fileID: 341565249}
+      objectReference: {fileID: 341565251}
+    - target: {fileID: 1367635462987303260, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP2
+      value: 
+      objectReference: {fileID: 341565250}
     - target: {fileID: 1367635463001564339, guid: 6091d84c91142ef4d9ff625d9d230475,
         type: 3}
       propertyPath: chronoSlider
       value: 
       objectReference: {fileID: 341565249}
-    m_RemovedComponents:
-    - {fileID: 3152372678452689670, guid: 6091d84c91142ef4d9ff625d9d230475, type: 3}
-    - {fileID: 3152372678452689669, guid: 6091d84c91142ef4d9ff625d9d230475, type: 3}
-    - {fileID: 3152372678452689676, guid: 6091d84c91142ef4d9ff625d9d230475, type: 3}
-    - {fileID: 3152372678452689677, guid: 6091d84c91142ef4d9ff625d9d230475, type: 3}
-    - {fileID: 3152372678452689678, guid: 6091d84c91142ef4d9ff625d9d230475, type: 3}
-    - {fileID: 3152372678452689672, guid: 6091d84c91142ef4d9ff625d9d230475, type: 3}
-    - {fileID: 3152372678452689674, guid: 6091d84c91142ef4d9ff625d9d230475, type: 3}
-    - {fileID: 3152372678452689671, guid: 6091d84c91142ef4d9ff625d9d230475, type: 3}
-    - {fileID: 3152372678452689675, guid: 6091d84c91142ef4d9ff625d9d230475, type: 3}
-    - {fileID: 3152372678452689668, guid: 6091d84c91142ef4d9ff625d9d230475, type: 3}
-    - {fileID: 3152372678452689673, guid: 6091d84c91142ef4d9ff625d9d230475, type: 3}
+    - target: {fileID: 1367635463001564339, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP1
+      value: 
+      objectReference: {fileID: 341565251}
+    - target: {fileID: 1367635463001564339, guid: 6091d84c91142ef4d9ff625d9d230475,
+        type: 3}
+      propertyPath: PanelVillagerKillP2
+      value: 
+      objectReference: {fileID: 341565250}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6091d84c91142ef4d9ff625d9d230475, type: 3}
 --- !u!1001 &434197564
 PrefabInstance:
@@ -1325,6 +1462,16 @@ PrefabInstance:
       propertyPath: p2UI
       value: 
       objectReference: {fileID: 341565247}
+    - target: {fileID: 906843122915441781, guid: db9f123c207149142b6f0f01a2749b32,
+        type: 3}
+      propertyPath: PanelVillagerKillP1
+      value: 
+      objectReference: {fileID: 341565251}
+    - target: {fileID: 906843122915441781, guid: db9f123c207149142b6f0f01a2749b32,
+        type: 3}
+      propertyPath: PanelVillagerKillP2
+      value: 
+      objectReference: {fileID: 341565250}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db9f123c207149142b6f0f01a2749b32, type: 3}
 --- !u!1 &1205279448 stripped
