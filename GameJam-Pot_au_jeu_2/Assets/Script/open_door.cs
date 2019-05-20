@@ -25,9 +25,11 @@ public class open_door : MonoBehaviour
     GameObject villager;
     GameObject player;
 
-    
+	public GameObject PanelVillagerKillP1;
+	public GameObject PanelVillagerKillP2;
 
-    void OnTriggerEnter2D (Collider2D other)
+
+	void OnTriggerEnter2D (Collider2D other)
     {
         Debug.Log("TrigerEnter");
         trigger = true;
@@ -71,7 +73,8 @@ public class open_door : MonoBehaviour
             Debug.Log("Trigger: " + trigger+" // P1: "+ p1+ " // P2: " + p2);
             isKilled = true;
             StartCoroutine("fadeOut");
-            gameManager.Instance.killVillager(player, villager);
+
+			gameManager.Instance.killVillager(player, villager);
         }
         
 
@@ -91,6 +94,16 @@ public class open_door : MonoBehaviour
             gameManager.Instance.startNewRound();
         }
 
-        m_Renderer.sprite = BloodyDoor;
+		if (player.tag == "Player1") {
+			PanelVillagerKillP1.GetComponent<KillText>().UpdateKillText(villager);
+			PanelVillagerKillP1.SetActive(true);
+		}
+
+		if (player.tag == "Player2") {
+			PanelVillagerKillP2.GetComponent<KillText>().UpdateKillText(villager);
+			PanelVillagerKillP2.SetActive(true);
+		}
+
+		m_Renderer.sprite = BloodyDoor;
     }
 }
