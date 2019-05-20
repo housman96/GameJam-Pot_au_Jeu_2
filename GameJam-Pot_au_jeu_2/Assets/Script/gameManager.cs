@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Pathfinding;
 using UnityEngine.PostProcessing;
+using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
@@ -57,6 +58,9 @@ public class gameManager : MonoBehaviour
 
     public Dialogue dialogue;
 
+    public int scoreP1;
+    public int scoreP2;
+    public GameObject winner;
 
     public AudioClip yellingWolvesClip;
     public AudioClip morningClip;
@@ -70,6 +74,7 @@ public class gameManager : MonoBehaviour
     {
         musicManager.setTargetVolume(0.75f);
         Instance = this;
+        DontDestroyOnLoad(this.gameObject);
 
         for (int i = 0; i < playerList.Count; i++)
         {
@@ -214,6 +219,7 @@ public class gameManager : MonoBehaviour
             }
 
         }
+
     }
 
     public IEnumerator yellingWolves()
@@ -238,6 +244,17 @@ public class gameManager : MonoBehaviour
         listener.Play();
         yield return new WaitUntil(() => !listener.isPlaying);
         Destroy(listener);
+
+        if (scoreP1 == 3)
+        {
+            winner = playerList[0];
+            SceneManager.LoadScene("GameOver");
+        }
+        else if (scoreP2 == 3)
+        {
+            winner = playerList[1];
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
     public void killVillager(GameObject player, GameObject villager)
@@ -248,11 +265,13 @@ public class gameManager : MonoBehaviour
         if (player.tag == "Player1")
         {
             panelP1.GetComponent<AfficheCible>().AfficherLaMort(villager);
+            scoreP1 += 1;
             p1HasKilled = true;
         }
         else if (player.tag == "Player2")
         {
             panelP2.GetComponent<AfficheCible>().AfficherLaMort(villager);
+            scoreP2 += 1;
             p2HasKilled = true;
         }
     }
@@ -278,5 +297,7 @@ public class gameManager : MonoBehaviour
         gameManager.Instance.p2HasKilled = false;
 
         dialogue.GenerateNewDialogues();
+
+        
     }
 }
