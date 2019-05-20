@@ -1929,16 +1929,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
         type: 3}
-      propertyPath: villagers.Array.size
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
-      propertyPath: houses.Array.size
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7169373730941979037, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
-        type: 3}
       propertyPath: villagers.Array.data[0]
       value: 
       objectReference: {fileID: 1741867065}
@@ -2059,6 +2049,18 @@ PrefabInstance:
       objectReference: {fileID: 508898216}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ede08329dddf4b499f48a5c1e6b45f8, type: 3}
+--- !u!114 &2046810485 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7169373730941979027, guid: 5ede08329dddf4b499f48a5c1e6b45f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2046810484}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac330912e51d95043bb18e9204d13119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2081013859 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2584387954255681800, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9,
@@ -3010,5 +3012,10 @@ PrefabInstance:
       propertyPath: panelP2
       value: 
       objectReference: {fileID: 2081013859}
+    - target: {fileID: 5925418860763036252, guid: d49290f4d03f7ae4fbd9509fa7885f81,
+        type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 2046810485}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d49290f4d03f7ae4fbd9509fa7885f81, type: 3}
