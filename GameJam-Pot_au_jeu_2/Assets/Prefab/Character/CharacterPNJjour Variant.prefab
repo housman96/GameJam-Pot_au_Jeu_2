@@ -15,7 +15,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 0.75
 --- !u!114 &900364514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
   repathRate: Infinity
   canSearch: 1
   canMove: 1
-  speed: 4
+  speed: 2
   orientation: 1
   enableRotation: 0
   rotationSpeed: 0
@@ -97,6 +97,10 @@ MonoBehaviour:
   animationController: {fileID: 3340858586754518296}
   destinationSetter: {fileID: 900364515}
   lerp: {fileID: 900364516}
+  PanelP1: {fileID: 0}
+  PanelP2: {fileID: 0}
+  TextP1: {fileID: 0}
+  TextP2: {fileID: 0}
 --- !u!1001 &6663260846230379945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -107,7 +111,12 @@ PrefabInstance:
     - target: {fileID: 8225179583981654152, guid: 013b68cfa39b7604587a9944dabe73f9,
         type: 3}
       propertyPath: m_Name
-      value: CharacterPNJjour
+      value: CharacterPNJjour Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179583981654152, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Villager
       objectReference: {fileID: 0}
     - target: {fileID: 8225179583981654197, guid: 013b68cfa39b7604587a9944dabe73f9,
         type: 3}
@@ -178,6 +187,11 @@ PrefabInstance:
         type: 3}
       propertyPath: isIA
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225179583981654157, guid: 013b68cfa39b7604587a9944dabe73f9,
+        type: 3}
+      propertyPath: m_SleepingMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 013b68cfa39b7604587a9944dabe73f9, type: 3}

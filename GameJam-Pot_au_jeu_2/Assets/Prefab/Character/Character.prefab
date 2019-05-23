@@ -787,7 +787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 302d7bfa6be9e38418d741bece0edce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 11400000, guid: e3003a0700ea6f24da357c546ed33639, type: 2}
+  character: {fileID: 11400000, guid: e60ce3aa9c506c343a09ab46ab36a15e, type: 2}
   name: 
   body: {fileID: 8225179584528073874}
   eyes: {fileID: 8225179585196422853}
@@ -881,8 +881,8 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.07}
+  m_UsedByComposite: 1
+  m_Offset: {x: 0, y: -0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -893,7 +893,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.5}
+  m_Size: {x: 0.22, y: 0.39}
   m_EdgeRadius: 0
 --- !u!1 &8225179583983106882
 GameObject:
@@ -1280,7 +1280,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.05
+  m_Volume: 0.092
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1443,7 +1443,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4505aa9ad9f5b17498a00f88828f2f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 8225179585177441681}
+  sourceStep: {fileID: 0}
+  sourceSword: {fileID: 0}
+  sourceBowStart: {fileID: 0}
+  sourceBowEnd: {fileID: 0}
   stepClip:
   - {fileID: 8300000, guid: eefeaffb94760f749aec20facaa3583c, type: 3}
   - {fileID: 8300000, guid: e40f2b9396883d14fb3303e77779e3c9, type: 3}
@@ -1457,6 +1460,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b608af2f01ff4c24aa80d012228df797, type: 3}
   - {fileID: 8300000, guid: d1912a7825b9eda43a24467e1fe12cbc, type: 3}
   - {fileID: 8300000, guid: 23721b4f74d86454ea1cad1fd62ff7ba, type: 3}
+  bowStartClip:
+  - {fileID: 8300000, guid: e80c141fea4d995489f7dc97307cd900, type: 3}
+  bowReleaseClip:
+  - {fileID: 8300000, guid: 99306030dda05374cb62369b03005842, type: 3}
+  - {fileID: 8300000, guid: 74c63c7615241f14a83dd3b3367e5e85, type: 3}
 --- !u!1 &8225179585196422853
 GameObject:
   m_ObjectHideFlags: 0

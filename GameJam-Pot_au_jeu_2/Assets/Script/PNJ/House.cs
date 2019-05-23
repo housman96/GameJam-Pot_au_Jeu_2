@@ -12,6 +12,7 @@ public class House : MonoBehaviour
 	public Size size;
 	public Door door;
 	public Deco deco;
+    public Villager villager;
 
 
 	void Start()

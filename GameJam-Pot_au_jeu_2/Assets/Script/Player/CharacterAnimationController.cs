@@ -106,7 +106,7 @@ public class CharacterAnimationController : MonoBehaviour
                     }
 
                     //movement
-                    if (!animator.GetBool("sword"))
+                    if (!animator.GetBool("sword") && !animator.GetBool("bow"))
                     {
                         animator.SetBool("isMoving", isMoving);
                         animator.SetFloat("XSpeed", input.x);
@@ -225,9 +225,18 @@ public class CharacterAnimationController : MonoBehaviour
         {
             if (animator.runtimeAnimatorController != null)
             {
-                animator.SetBool("sword", true);
-                animator.SetFloat("XSpeed", Xspeed);
-                animator.SetFloat("YSpeed", Yspeed);
+                animator.SetBool("bow", true);
+                if (Mathf.Abs(Xspeed) > Mathf.Abs(Yspeed))
+                {
+                    animator.SetFloat("XSpeed", Xspeed);
+                    animator.SetFloat("YSpeed", 0);
+                }
+                else
+                {
+                    animator.SetFloat("XSpeed", 0);
+                    animator.SetFloat("YSpeed", Yspeed);
+                }
+
             }
         }
     }

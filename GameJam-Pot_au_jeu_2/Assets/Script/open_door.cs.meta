@@ -3,7 +3,8 @@ guid: 8905291984a7f6441b7136cd1455a4c9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - BloodyDoor: {fileID: 21300000, guid: 8f9b6e79cc2284946a18987482f74fe0, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
