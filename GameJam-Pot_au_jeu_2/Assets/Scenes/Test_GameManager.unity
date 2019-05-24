@@ -267,16 +267,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2264660198760634670, guid: b843e985184f46b48b7930cab39550aa,
-        type: 3}
-      propertyPath: name
-      value: Player2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2264660198760634642, guid: b843e985184f46b48b7930cab39550aa,
-        type: 3}
-      propertyPath: speed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1000427929075519856, guid: b843e985184f46b48b7930cab39550aa,
         type: 3}
       propertyPath: camera
@@ -292,6 +282,16 @@ PrefabInstance:
       propertyPath: repliPosition
       value: 
       objectReference: {fileID: 422974747}
+    - target: {fileID: 2264660198760634642, guid: b843e985184f46b48b7930cab39550aa,
+        type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2264660198760634670, guid: b843e985184f46b48b7930cab39550aa,
+        type: 3}
+      propertyPath: name
+      value: Player2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b843e985184f46b48b7930cab39550aa, type: 3}
 --- !u!4 &105572424 stripped
@@ -390,16 +390,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8187319211178031115, guid: 219d1656c3d933d4db598b1a444254d3,
-        type: 3}
-      propertyPath: name
-      value: Player1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8187319211178031159, guid: 219d1656c3d933d4db598b1a444254d3,
-        type: 3}
-      propertyPath: speed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 8960578343966195535, guid: 219d1656c3d933d4db598b1a444254d3,
         type: 3}
       propertyPath: imageFondu
@@ -415,6 +405,16 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1344765743}
+    - target: {fileID: 8187319211178031159, guid: 219d1656c3d933d4db598b1a444254d3,
+        type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187319211178031115, guid: 219d1656c3d933d4db598b1a444254d3,
+        type: 3}
+      propertyPath: name
+      value: Player1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 219d1656c3d933d4db598b1a444254d3, type: 3}
 --- !u!4 &202765946 stripped
@@ -1653,14 +1653,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1208419621}
   m_PrefabAsset: {fileID: 0}
---- !u!81 &1208419623
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208419622}
-  m_Enabled: 1
 --- !u!114 &1208419624 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 655211145, guid: d4a16d7a2f418f44fa621994ea41cba6,
