@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuHandler : MonoBehaviour
 {
@@ -53,12 +54,14 @@ public class MenuHandler : MonoBehaviour
         {
             isInTransition = true;
 
-            panelCredits.layer = 1;
+            setAlphaObject(panelCredits, 0);
+
             panelMenu.layer = 0;
+            panelCredits.layer = 1;
+
 
             float a = 0;
 
-            setAlphaObject(panelCredits, 0);
             panelCredits.SetActive(true);
 
             while (a <= 1)
@@ -70,8 +73,8 @@ public class MenuHandler : MonoBehaviour
             }
 
             panelMenu.SetActive(false);
+            isInTransition = false;
         }
-        isInTransition = false;
     }
 
     public IEnumerator menuToTutorial()
@@ -83,8 +86,9 @@ public class MenuHandler : MonoBehaviour
 
             setAlphaObject(panelTutoriel, 0);
 
-            panelTutoriel.layer = 1;
             panelMenu.layer = 0;
+            panelTutoriel.layer = 1;
+
 
 
             panelTutoriel.SetActive(true);
@@ -99,9 +103,9 @@ public class MenuHandler : MonoBehaviour
             }
 
             panelMenu.SetActive(false);
-
+            isInTransition = false;
         }
-        isInTransition = false;
+
     }
 
     public IEnumerator creditsToMenu()
@@ -109,11 +113,13 @@ public class MenuHandler : MonoBehaviour
         if (!isInTransition)
         {
             isInTransition = true;
+            setAlphaObject(panelMenu, 0);
+
             panelCredits.layer = 0;
             panelMenu.layer = 1;
 
             float a = 0;
-            setAlphaObject(panelMenu, 0);
+
             panelMenu.SetActive(true);
             while (a <= 1)
             {
@@ -124,8 +130,9 @@ public class MenuHandler : MonoBehaviour
             }
 
             panelCredits.SetActive(false);
+            isInTransition = false;
         }
-        isInTransition = false;
+
     }
 
     public IEnumerator tutorielToMenu()
@@ -133,12 +140,15 @@ public class MenuHandler : MonoBehaviour
         if (!isInTransition)
         {
             isInTransition = true;
+
+            setAlphaObject(panelMenu, 0);
+
             panelTutoriel.layer = 0;
             panelMenu.layer = 1;
 
             float a = 0;
 
-            setAlphaObject(panelMenu, 0);
+
             panelMenu.SetActive(true);
 
             while (a <= 1)
@@ -149,9 +159,9 @@ public class MenuHandler : MonoBehaviour
                 a += 0.05f;
             }
             panelTutoriel.SetActive(false);
-
+            isInTransition = false;
         }
-        isInTransition = false;
+
 
     }
 
@@ -163,6 +173,11 @@ public class MenuHandler : MonoBehaviour
             if (child.GetComponent<CanvasRenderer>() != null)
             {
                 child.GetComponent<CanvasRenderer>().SetAlpha(a);
+            }
+            if (child.GetComponent<Image>() != null && child.GetComponent<Button>())
+            {
+                child.GetComponent<Image>().color = new Color(child.GetComponent<Image>().color.r, child.GetComponent<Image>().color.g, child.GetComponent<Image>().color.b, a);
+
             }
             setAlphaObject(child.gameObject, a);
         }
