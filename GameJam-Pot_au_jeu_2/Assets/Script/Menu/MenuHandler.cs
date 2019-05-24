@@ -8,6 +8,8 @@ public class MenuHandler : MonoBehaviour
     public GameObject panelTutoriel;
     public GameObject panelCredits;
 
+    public bool isInTransition = false;
+
     public void Start()
     {
         panelCredits.SetActive(false);
@@ -43,103 +45,113 @@ public class MenuHandler : MonoBehaviour
     {
         Debug.Log("QUIT!");
         Application.Quit();
-    } 
+    }
 
     public IEnumerator menuToCredits()
     {
-        float a = 0;
-
-        setAlphaObject(panelCredits, 0);
-        panelCredits.SetActive(true);
-
-        while (a <= 1)
+        if (!isInTransition)
         {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(panelCredits, a);
-            a += 0.05f;
-        }
-        yield return new WaitForSeconds(0.5f);
+            isInTransition = true;
 
-        a = 1;
-        while (a >= 0)
-        {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(panelMenu, a);
-            a -= 0.05f;
+            panelCredits.layer = 1;
+            panelMenu.layer = 0;
+
+            float a = 0;
+
+            setAlphaObject(panelCredits, 0);
+            panelCredits.SetActive(true);
+
+            while (a <= 1)
+            {
+                yield return new WaitForSeconds(0.01f);
+                setAlphaObject(panelCredits, a);
+                setAlphaObject(panelMenu, 1 - a);
+                a += 0.05f;
+            }
+
+            panelMenu.SetActive(false);
         }
-        panelMenu.SetActive(false);
+        isInTransition = false;
     }
 
     public IEnumerator menuToTutorial()
     {
-        float a = 0;
-
-        setAlphaObject(panelTutoriel, 0);
-        panelTutoriel.SetActive(true);
-
-        while (a <= 1)
+        if (!isInTransition)
         {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(panelTutoriel, a);
-            a += 0.05f;
-        }
-        yield return new WaitForSeconds(0.5f);
+            isInTransition = true;
+            float a = 0;
 
-        a = 1;
-        while (a >= 0)
-        {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(panelMenu, a);
-            a -= 0.05f;
+            setAlphaObject(panelTutoriel, 0);
+
+            panelTutoriel.layer = 1;
+            panelMenu.layer = 0;
+
+
+            panelTutoriel.SetActive(true);
+
+
+            while (a <= 1)
+            {
+                yield return new WaitForSeconds(0.01f);
+                setAlphaObject(panelTutoriel, a);
+                setAlphaObject(panelMenu, 1 - a);
+                a += 0.05f;
+            }
+
+            panelMenu.SetActive(false);
+
         }
-        panelMenu.SetActive(false);
+        isInTransition = false;
     }
 
     public IEnumerator creditsToMenu()
     {
-        float a = 1;
-        setAlphaObject(panelMenu, 0);
-        panelMenu.SetActive(true);
-        while (a <= 1)
+        if (!isInTransition)
         {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(panelMenu, a);
-            a += 0.05f;
-        }
-        yield return new WaitForSeconds(0.5f);
+            isInTransition = true;
+            panelCredits.layer = 0;
+            panelMenu.layer = 1;
 
-        a = 1;
-        while (a >= 0)
-        {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(panelCredits, a);
-            a -= 0.05f;
-        }
-        panelCredits.SetActive(false);
+            float a = 0;
+            setAlphaObject(panelMenu, 0);
+            panelMenu.SetActive(true);
+            while (a <= 1)
+            {
+                yield return new WaitForSeconds(0.01f);
+                setAlphaObject(panelMenu, a);
+                setAlphaObject(panelCredits, 1 - a);
+                a += 0.05f;
+            }
 
+            panelCredits.SetActive(false);
+        }
+        isInTransition = false;
     }
 
     public IEnumerator tutorielToMenu()
     {
-        float a = 1;
-        setAlphaObject(panelMenu, 0);
-        panelMenu.SetActive(true);
-        while (a <= 1)
+        if (!isInTransition)
         {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(panelMenu, a);
-            a += 0.05f;
-        }
-        yield return new WaitForSeconds(0.5f);
+            isInTransition = true;
+            panelTutoriel.layer = 0;
+            panelMenu.layer = 1;
 
-        a = 1;
-        while (a >= 0)
-        {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(panelTutoriel, a);
-            a -= 0.05f;
+            float a = 0;
+
+            setAlphaObject(panelMenu, 0);
+            panelMenu.SetActive(true);
+
+            while (a <= 1)
+            {
+                yield return new WaitForSeconds(0.01f);
+                setAlphaObject(panelMenu, a);
+                setAlphaObject(panelTutoriel, 1 - a);
+                a += 0.05f;
+            }
+            panelTutoriel.SetActive(false);
+
         }
-        panelTutoriel.SetActive(false);
+        isInTransition = false;
 
     }
 
