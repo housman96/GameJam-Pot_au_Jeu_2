@@ -148,10 +148,10 @@ public class IAPNJjour : MonoBehaviour
 		if (current.villagerToTalk1.house.size == Size.Large) { Taille = "large"; } else if (current.villagerToTalk1.house.size == Size.Medium) { Taille = "medium"; } else { Taille = "small"; }
 
 		string Porte;
-		if (current.villagerToTalk1.house.door == Door.Brown) { Porte = "brown"; } else if (current.villagerToTalk1.house.door == Door.Blue) { Porte = "blue"; } else { Porte = "green"; }
+		if (current.villagerToTalk2.house.door == Door.Brown) { Porte = "brown"; } else if (current.villagerToTalk2.house.door == Door.Blue) { Porte = "blue"; } else { Porte = "green"; }
 
 		string Objet;
-		if (current.villagerToTalk1.house.deco == Deco.Barrel) { Objet = "barrel"; } else if (current.villagerToTalk1.house.deco == Deco.Seat) { Objet = "seat"; } else { Objet = "ladder"; }
+		if (current.villagerToTalk3.house.deco == Deco.Barrel) { Objet = "barrel"; } else if (current.villagerToTalk3.house.deco == Deco.Seat) { Objet = "seat"; } else { Objet = "ladder"; }
 
 		TextP1.text = "Hello,\n<b>" + Nom1 + "</b> has a <b>" + Taille + "</b> house. \n<b>" + Nom2 + "</b> has a <b>" + Porte + "</b> door. \nThere is a <b>" + Objet + "</b> around <b>" + Nom3 + "</b>'s house.";
 		PanelP1.SetActive(true);
@@ -167,10 +167,10 @@ public class IAPNJjour : MonoBehaviour
 		if (current.villagerToTalk1.house.size == Size.Large) { Taille = "large"; } else if (current.villagerToTalk1.house.size == Size.Medium) { Taille = "medium"; } else { Taille = "small"; }
 
 		string Porte;
-		if (current.villagerToTalk1.house.door == Door.Brown) { Porte = "brown"; } else if (current.villagerToTalk1.house.door == Door.Blue) { Porte = "blue"; } else { Porte = "green"; }
+		if (current.villagerToTalk2.house.door == Door.Brown) { Porte = "brown"; } else if (current.villagerToTalk2.house.door == Door.Blue) { Porte = "blue"; } else { Porte = "green"; }
 
 		string Objet;
-		if (current.villagerToTalk1.house.deco == Deco.Barrel) { Objet = "barrel"; } else if (current.villagerToTalk1.house.deco == Deco.Seat) { Objet = "seat"; } else { Objet = "ladder"; }
+		if (current.villagerToTalk3.house.deco == Deco.Barrel) { Objet = "barrel"; } else if (current.villagerToTalk3.house.deco == Deco.Seat) { Objet = "seat"; } else { Objet = "ladder"; }
 
 		TextP2.text = "Hello,\n<b>" + Nom1 + "</b> has a <b>" + Taille + "</b> house. \n<b>" + Nom2 + "</b> has a <b>" + Porte + "</b> door. \nThere is a <b>" + Objet + "</b> around <b>" + Nom3 + "</b>'s house.";
 		PanelP2.SetActive(true);
