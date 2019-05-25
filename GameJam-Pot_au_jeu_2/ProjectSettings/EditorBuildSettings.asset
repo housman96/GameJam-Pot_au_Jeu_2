@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/devIA.unity
     guid: ea4c6f42438f1ad4d929b5bf773bd509
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: ceef9267442909d49bf1b1c09a017d61
   m_configObjects: {}
