@@ -31,19 +31,19 @@ public class open_door : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("TrigerEnter");
+        //Debug.Log("TrigerEnter");
         trigger = true;
         player = other.gameObject;
-        Debug.Log("other: " + player);
-        Debug.Log(transform.parent.gameObject.GetComponent<House>());
+        //Debug.Log("other: " + player);
+        //Debug.Log(transform.parent.gameObject.GetComponent<House>());
         villager = transform.parent.gameObject.GetComponent<House>().villager.gameObject;
-        Debug.Log("Villager: " + villager);
+        //Debug.Log("Villager: " + villager);
         //Debug.Log(chronoValue);
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("TrigerExit");
+        //Debug.Log("TrigerExit");
         trigger = false;
     }
 
@@ -66,7 +66,7 @@ public class open_door : MonoBehaviour
 
         chronoValue = chronoSlider.value;
 
-        if (trigger == true && isKilled == false && (p1 == 1 || p2 == 1) && chronoValue >= 13)
+        if (trigger == true && (player.tag == "Player1" || player.tag == "Player2") && isKilled == false && (p1 == 1 || p2 == 1) && chronoValue >= 13)
         {
             if (p1 == 1) { imageFondu = p1UI; }
             else { imageFondu = p2UI; }
@@ -88,7 +88,9 @@ public class open_door : MonoBehaviour
         }
         gameManager.Instance.teleportPlayer(player);
 
-		if (player.tag == "Player1") {            PanelVillagerKillP1.GetComponent<KillText>().UpdateKillText(villager);
+        if (player.tag == "Player1")
+        {
+            PanelVillagerKillP1.GetComponent<KillText>().UpdateKillText(villager);
             PanelVillagerKillP1.SetActive(true);
         }
 
@@ -100,6 +102,6 @@ public class open_door : MonoBehaviour
 
         m_Renderer.sprite = BloodyDoor;
 
-		
+
     }
 }
