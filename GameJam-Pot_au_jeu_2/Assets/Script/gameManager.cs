@@ -140,39 +140,37 @@ public class gameManager : MonoBehaviour
 
         if (timeValue >= 12 && timeValue <= 12.25)
         {
-            foreach (GameObject player in playerList)
-            {
-                teleportPlayer(player);
-
-                player.gameObject.GetComponent<CharacterEnabler>().changeSkin(player, skinWerewolf);
-
-            }
-            deathNumer = 0;
-            for (int i = 0; i < villagerList.Count; i++)
-            {
-                if (villagerList[i].activeSelf)
-                {
-                    villagerList[i].transform.position = new Vector2(500 + i, 500 + i);
-                    villagerList[i].GetComponent<IAPNJjour>().enabled = false;
-                    villagerList[i].GetComponent<AILerp>().enabled = false;
-                }
-                else
-                {
-                    deathNumer++;
-                }
-            }
-
-
-
             if (songDay)
             {
+                foreach (GameObject player in playerList)
+                {
+                    teleportPlayer(player);
+
+                    player.gameObject.GetComponent<CharacterEnabler>().changeSkin(player, skinWerewolf);
+
+                }
+                deathNumer = 0;
+                for (int i = 0; i < villagerList.Count; i++)
+                {
+                    if (villagerList[i].activeSelf)
+                    {
+                        villagerList[i].transform.position = new Vector2(500 + i, 500 + i);
+                        villagerList[i].GetComponent<IAPNJjour>().enabled = false;
+                        villagerList[i].GetComponent<AILerp>().enabled = false;
+                    }
+                    else
+                    {
+                        deathNumer++;
+                    }
+                }
+
                 camera1.profile = nightPostProcess;
                 camera2.profile = nightPostProcess;
                 musicManager.setMusicOn(clipNight, 1);
                 StartCoroutine("yellingWolves");
                 songDay = false;
 
-                for (int i = 0; i < Mathf.Min(12, deathNumer + 4); i++)
+                for (int i = 0; i < Mathf.Min(6, deathNumer + 1); i++)
                 {
                     GameObject newChasseur = (Instantiate(chasseur, startVillagerPosition[i], Quaternion.identity));
                     listChasseur.Add(newChasseur);
@@ -182,27 +180,27 @@ public class gameManager : MonoBehaviour
         }
         else if (timeValue >= 0 && timeValue <= 0.25)
         {
-            foreach (GameObject player in playerList)
-            {
-                teleportPlayer(player);
 
-                player.gameObject.GetComponent<CharacterEnabler>().changeSkin(player, playersSkin[player]);
-
-                player.GetComponent<AILerp>().enabled = false;
-
-                player.GetComponent<CharacterInputController>().enabled = true;
-                player.GetComponent<Fuite>().isInFuite = false;
-                player.GetComponent<BoxCollider2D>().enabled = true;
-            }
-            for (int i = 0; i < villagerList.Count; i++)
-            {
-                villagerList[i].transform.position = startVillagerPosition[i];
-                villagerList[i].GetComponent<IAPNJjour>().enabled = true;
-                villagerList[i].GetComponent<AILerp>().enabled = true;
-            }
             if (!songDay)
             {
+                foreach (GameObject player in playerList)
+                {
+                    teleportPlayer(player);
 
+                    player.gameObject.GetComponent<CharacterEnabler>().changeSkin(player, playersSkin[player]);
+
+                    player.GetComponent<AILerp>().enabled = false;
+
+                    player.GetComponent<CharacterInputController>().enabled = true;
+                    player.GetComponent<Fuite>().isInFuite = false;
+                    player.GetComponent<BoxCollider2D>().enabled = true;
+                }
+                for (int i = 0; i < villagerList.Count; i++)
+                {
+                    villagerList[i].transform.position = startVillagerPosition[i];
+                    villagerList[i].GetComponent<IAPNJjour>().enabled = true;
+                    villagerList[i].GetComponent<AILerp>().enabled = true;
+                }
 
                 musicManager.setMusicOn(clipDay, 1);
                 camera1.profile = dayPostProcess;
@@ -291,13 +289,16 @@ public class gameManager : MonoBehaviour
 
     public IEnumerator startNewRoundEnum()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(4f);
         chronoSlider.value = 0;
         gameManager.Instance.p1HasKilled = false;
         gameManager.Instance.p2HasKilled = false;
 
         dialogue.GenerateNewDialogues();
 
-        
+
     }
+
+
+
 }

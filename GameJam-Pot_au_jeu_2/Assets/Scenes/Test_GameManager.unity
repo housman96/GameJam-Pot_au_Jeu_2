@@ -390,16 +390,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8187319211178031159, guid: 219d1656c3d933d4db598b1a444254d3,
-        type: 3}
-      propertyPath: speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8187319211178031115, guid: 219d1656c3d933d4db598b1a444254d3,
-        type: 3}
-      propertyPath: name
-      value: Player1
-      objectReference: {fileID: 0}
     - target: {fileID: 8960578343966195535, guid: 219d1656c3d933d4db598b1a444254d3,
         type: 3}
       propertyPath: imageFondu
@@ -415,6 +405,16 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1344765743}
+    - target: {fileID: 8187319211178031159, guid: 219d1656c3d933d4db598b1a444254d3,
+        type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187319211178031115, guid: 219d1656c3d933d4db598b1a444254d3,
+        type: 3}
+      propertyPath: name
+      value: Player1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 219d1656c3d933d4db598b1a444254d3, type: 3}
 --- !u!4 &202765946 stripped
@@ -469,11 +469,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InGameUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1021430054481238077, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9,
-        type: 3}
-      propertyPath: m_Value
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6300004991924963545, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9,
         type: 3}
@@ -593,6 +588,11 @@ PrefabInstance:
     - target: {fileID: 6861645689898804692, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1021430054481238077, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9,
+        type: 3}
+      propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 903266131773128496, guid: 5f6ce47b2ef0a2243a4b90fad4cdadb9,

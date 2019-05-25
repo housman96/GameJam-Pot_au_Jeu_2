@@ -31,14 +31,17 @@ public class open_door : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //Debug.Log("TrigerEnter");
-        trigger = true;
-        player = other.gameObject;
-        //Debug.Log("other: " + player);
-        //Debug.Log(transform.parent.gameObject.GetComponent<House>());
-        villager = transform.parent.gameObject.GetComponent<House>().villager.gameObject;
-        //Debug.Log("Villager: " + villager);
-        //Debug.Log(chronoValue);
+        if (other.tag == "Player1" || other.tag == "Player2")
+        {
+            //Debug.Log("TrigerEnter");
+            trigger = true;
+            player = other.gameObject;
+            //Debug.Log("other: " + player);
+            //Debug.Log(transform.parent.gameObject.GetComponent<House>());
+            villager = transform.parent.gameObject.GetComponent<House>().villager.gameObject;
+            //Debug.Log("Villager: " + villager);
+            //Debug.Log(chronoValue);
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -66,7 +69,7 @@ public class open_door : MonoBehaviour
 
         chronoValue = chronoSlider.value;
 
-        if (trigger == true && (player.tag == "Player1" || player.tag == "Player2") && isKilled == false && (p1 == 1 || p2 == 1) && chronoValue >= 13)
+        if (trigger == true && isKilled == false && (p1 == 1 || p2 == 1) && chronoValue >= 13)
         {
             if (p1 == 1) { imageFondu = p1UI; }
             else { imageFondu = p2UI; }
