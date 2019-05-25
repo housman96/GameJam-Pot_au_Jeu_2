@@ -153,10 +153,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5385107326837013262}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f71e4fc70f5c0fc4aa099549e0261601, type: 3}
+  m_Script: {fileID: 11500000, guid: 136c3336a872c7346966ef8b5d77ed9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints: {fileID: 0}
+  waypoints: {fileID: 2385556475086184293, guid: 488371e94f18bb542a3eefc907255ce8,
+    type: 3}
   animationController: {fileID: 5385107326837013303}
   destinationSetter: {fileID: 1599942217379993776}
   lerp: {fileID: 4533193139775720445}

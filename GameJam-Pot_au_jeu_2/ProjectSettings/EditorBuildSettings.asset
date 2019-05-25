@@ -5,16 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 1ae9d9b61b56d1444b358341a1fbb740
+  - enabled: 1
+    path: Assets/Scenes/Cinematique.unity
+    guid: 7bc0a9bce1a712940afe1dd48031f9fd
+  - enabled: 1
+    path: Assets/Scenes/Test_GameManager.unity
+    guid: 745a66e57ec2ae14fb8af112cf2eebc9
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
     path: Assets/Scenes/TestCharacterMovement.unity
     guid: 577d3135f6069cb479e214da74225eb8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/devIA.unity
     guid: ea4c6f42438f1ad4d929b5bf773bd509
+  - enabled: 0
+    path: Assets/Scenes/GameOver.unity
+    guid: ceef9267442909d49bf1b1c09a017d61
   m_configObjects: {}

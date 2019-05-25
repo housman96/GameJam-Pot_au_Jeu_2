@@ -1,10 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GameJam-Pot_au_jeu_2/Assets/Cinemachine/Base/Editor/Resources/cm_logo_sm.png.meta
+guid: ff50be86e7775874dbd77415363c95cb
+=======
 guid: f1635737dfbd13348951dd0f69f55ad9
 timeCreated: 1507309913
 licenseType: Store
+>>>>>>> develop:GameJam-Pot_au_jeu_2/Assets/POLYGON_Renderbox/LUT/Polygon_LUT_Cartoon_Grainy.png.meta
 TextureImporter:
-  fileIDToRecycleName: {}
-  serializedVersion: 4
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,6 +25,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -29,8 +36,15 @@ TextureImporter:
   textureSettings:
     filterMode: -1
     aniso: -1
+<<<<<<< HEAD:GameJam-Pot_au_jeu_2/Assets/Cinemachine/Base/Editor/Resources/cm_logo_sm.png.meta
+    mipBias: -100
+    wrapU: -1
+    wrapV: -1
+    wrapW: -1
+=======
     mipBias: -1
     wrapMode: -1
+>>>>>>> develop:GameJam-Pot_au_jeu_2/Assets/POLYGON_Renderbox/LUT/Polygon_LUT_Cartoon_Grainy.png.meta
   nPOTScale: 1
   lightmap: 0
   compressionQuality: 50
@@ -39,38 +53,60 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 0
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Standalone
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline: []
+<<<<<<< HEAD:GameJam-Pot_au_jeu_2/Assets/Cinemachine/Base/Editor/Resources/cm_logo_sm.png.meta
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+=======
+>>>>>>> develop:GameJam-Pot_au_jeu_2/Assets/POLYGON_Renderbox/LUT/Polygon_LUT_Cartoon_Grainy.png.meta
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

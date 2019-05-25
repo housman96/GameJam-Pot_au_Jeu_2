@@ -1,20 +1,32 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuHandler : MonoBehaviour
 {
-    public GameObject canvasMenu;
-    public GameObject canvasCredits;
+    public GameObject panelMenu;
+    public GameObject panelTutoriel;
+    public GameObject panelCredits;
+
+    public bool isInTransition = false;
 
     public void Start()
     {
-        canvasCredits.SetActive(false);
+        panelCredits.SetActive(false);
+        panelTutoriel.SetActive(false);
+        panelMenu.SetActive(true);
     }
 
     public void onClickNewGame()
     {
         SceneManager.LoadScene(1);
+        Debug.Log("Play!");
+    }
+
+    public void onClickTutorial()
+    {
+        StartCoroutine("menuToTutorial");
     }
 
     public void onClickCredits()
@@ -22,54 +34,134 @@ public class MenuHandler : MonoBehaviour
         StartCoroutine("menuToCredits");
     }
 
-    public void onClickMenu()
+    public void onClickMenu(bool isCredit)
     {
-        StartCoroutine("creditsToMenu");
+        if (isCredit)
+            StartCoroutine("creditsToMenu");
+        else
+            StartCoroutine("tutorielToMenu");
+    }
+
+    public void onClickExit()
+    {
+        Debug.Log("QUIT!");
+        Application.Quit();
     }
 
     public IEnumerator menuToCredits()
     {
-        float a = 1;
-        while (a >= 0)
+        if (!isInTransition)
         {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(canvasMenu, a);
-            a -= 0.05f;
-        }
-        canvasMenu.SetActive(false);
+            isInTransition = true;
 
-        yield return new WaitForSeconds(0.5f);
-        canvasCredits.SetActive(true);
-        setAlphaObject(canvasCredits, 0);
-        while (a <= 1)
+            setAlphaObject(panelCredits, 0);
+
+            panelMenu.layer = 0;
+            panelCredits.layer = 1;
+
+
+            float a = 0;
+
+            panelCredits.SetActive(true);
+
+            while (a <= 1)
+            {
+                yield return new WaitForSeconds(0.01f);
+                setAlphaObject(panelCredits, a);
+                setAlphaObject(panelMenu, 1 - a);
+                a += 0.05f;
+            }
+
+            panelMenu.SetActive(false);
+            isInTransition = false;
+        }
+    }
+
+    public IEnumerator menuToTutorial()
+    {
+        if (!isInTransition)
         {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(canvasCredits, a);
-            a += 0.05f;
+            isInTransition = true;
+            float a = 0;
+
+            setAlphaObject(panelTutoriel, 0);
+
+            panelMenu.layer = 0;
+            panelTutoriel.layer = 1;
+
+
+
+            panelTutoriel.SetActive(true);
+
+
+            while (a <= 1)
+            {
+                yield return new WaitForSeconds(0.01f);
+                setAlphaObject(panelTutoriel, a);
+                setAlphaObject(panelMenu, 1 - a);
+                a += 0.05f;
+            }
+
+            panelMenu.SetActive(false);
+            isInTransition = false;
         }
 
     }
 
     public IEnumerator creditsToMenu()
     {
-        float a = 1;
-        while (a >= 0)
+        if (!isInTransition)
         {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(canvasCredits, a);
-            a -= 0.05f;
-        }
-        canvasCredits.SetActive(false);
+            isInTransition = true;
+            setAlphaObject(panelMenu, 0);
 
-        yield return new WaitForSeconds(0.5f);
-        canvasMenu.SetActive(true);
-        setAlphaObject(canvasMenu, 0);
-        while (a <= 1)
-        {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(canvasMenu, a);
-            a += 0.05f;
+            panelCredits.layer = 0;
+            panelMenu.layer = 1;
+
+            float a = 0;
+
+            panelMenu.SetActive(true);
+            while (a <= 1)
+            {
+                yield return new WaitForSeconds(0.01f);
+                setAlphaObject(panelMenu, a);
+                setAlphaObject(panelCredits, 1 - a);
+                a += 0.05f;
+            }
+
+            panelCredits.SetActive(false);
+            isInTransition = false;
         }
+
+    }
+
+    public IEnumerator tutorielToMenu()
+    {
+        if (!isInTransition)
+        {
+            isInTransition = true;
+
+            setAlphaObject(panelMenu, 0);
+
+            panelTutoriel.layer = 0;
+            panelMenu.layer = 1;
+
+            float a = 0;
+
+
+            panelMenu.SetActive(true);
+
+            while (a <= 1)
+            {
+                yield return new WaitForSeconds(0.01f);
+                setAlphaObject(panelMenu, a);
+                setAlphaObject(panelTutoriel, 1 - a);
+                a += 0.05f;
+            }
+            panelTutoriel.SetActive(false);
+            isInTransition = false;
+        }
+
 
     }
 
@@ -81,6 +173,11 @@ public class MenuHandler : MonoBehaviour
             if (child.GetComponent<CanvasRenderer>() != null)
             {
                 child.GetComponent<CanvasRenderer>().SetAlpha(a);
+            }
+            if (child.GetComponent<Image>() != null && child.GetComponent<Button>())
+            {
+                child.GetComponent<Image>().color = new Color(child.GetComponent<Image>().color.r, child.GetComponent<Image>().color.g, child.GetComponent<Image>().color.b, a);
+
             }
             setAlphaObject(child.gameObject, a);
         }
