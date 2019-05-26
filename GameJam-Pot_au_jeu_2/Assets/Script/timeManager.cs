@@ -133,7 +133,7 @@ public class timeManager : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         isInFade = false;
-        Debug.Log("FadeOut" + isInFade);
+        //Debug.Log("FadeOut" + isInFade);
     }
 
     public IEnumerator fadeOutPanel()
@@ -170,7 +170,7 @@ public class timeManager : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         isInFade = false;
-        Debug.Log("fadeIn" + isInFade);
+        //Debug.Log("fadeIn" + isInFade);
     }
 
 }

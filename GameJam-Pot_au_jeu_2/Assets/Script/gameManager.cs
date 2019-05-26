@@ -11,6 +11,8 @@ public class gameManager : MonoBehaviour
     [SerializeField]
     public Slider chronoSlider;
 
+    public bool isJ1Winner = true;
+
     public GameObject chasseur;
 
     public float timeValue;
@@ -242,15 +244,17 @@ public class gameManager : MonoBehaviour
         listener.Play();
         yield return new WaitUntil(() => !listener.isPlaying);
         Destroy(listener);
-
+        Debug.Log("test0");
         if (scoreP1 == 3)
         {
-            winner = playerList[0];
+            Debug.Log("test1");
+            isJ1Winner = true;
             SceneManager.LoadScene("GameOver");
         }
         else if (scoreP2 == 3)
         {
-            winner = playerList[1];
+            Debug.Log("test2");
+            isJ1Winner = false;
             SceneManager.LoadScene("GameOver");
         }
     }
