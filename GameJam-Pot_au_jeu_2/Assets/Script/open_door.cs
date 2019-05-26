@@ -48,6 +48,7 @@ public class open_door : MonoBehaviour
     {
         //Debug.Log("TrigerExit");
         trigger = false;
+        player = null;
     }
 
     void Start()

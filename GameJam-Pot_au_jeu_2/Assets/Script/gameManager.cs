@@ -260,16 +260,24 @@ public class gameManager : MonoBehaviour
         deadVillager = villager;
         deadVillager.SetActive(false);
 
-        if (player.tag == "Player1")
+
+        if (playersTargets[playerList[0]].Contains(villager))
         {
             panelP1.GetComponent<AfficheCible>().AfficherLaMort(villager);
             scoreP1 += 1;
+        }
+        else if (playersTargets[playerList[1]].Contains(villager))
+        {
+            panelP2.GetComponent<AfficheCible>().AfficherLaMort(villager);
+            scoreP2 += 1;
+        }
+
+        if (player.tag == "Player1")
+        {
             p1HasKilled = true;
         }
         else if (player.tag == "Player2")
         {
-            panelP2.GetComponent<AfficheCible>().AfficherLaMort(villager);
-            scoreP2 += 1;
             p2HasKilled = true;
         }
     }

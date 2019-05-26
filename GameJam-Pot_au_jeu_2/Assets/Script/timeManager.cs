@@ -26,6 +26,7 @@ public class timeManager : MonoBehaviour
     bool isInPhase3 = false;
     bool isInPhase4 = false;
 
+    bool isInFade = false;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,11 @@ public class timeManager : MonoBehaviour
 
         p1UI.GetComponent<Image>().color = fadeB;
         p2UI.GetComponent<Image>().color = fadeB;
+
+
+        Debug.Log("test");
+        PanelVillagerKillP1.SetActive(false);
+        PanelVillagerKillP2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -59,90 +65,112 @@ public class timeManager : MonoBehaviour
         if (timeValue >= 11.75 & timeValue < 12 && !isInPhase1)
         {
             isInPhase1 = true;
+            isInPhase2 = false;
+            isInPhase3 = false;
             isInPhase4 = false;
 
-            StartCoroutine(fadeOut(p1UI));
-            StartCoroutine(fadeOut(p2UI));
+            StartCoroutine(fadeOut());
             //transition += Time.deltaTime / 2;
             //p1UI.color = Color.Lerp(fadeA, fadeB, transition);
             //p2UI.color = Color.Lerp(fadeA, fadeB, transition);
         }
         else if (timeValue >= 12 & timeValue < 12.25 && !isInPhase2)
         {
-            isInPhase2 = true;
             isInPhase1 = false;
+            isInPhase2 = true;
+            isInPhase3 = false;
+            isInPhase4 = false;
 
-            StartCoroutine(fadeIn(p1UI));
-            StartCoroutine(fadeIn(p2UI));
+            StartCoroutine(fadeIn());
             //transition -= Time.deltaTime / 2;
             //p1UI.color = Color.Lerp(fadeA, fadeB, transition);
             //p2UI.color = Color.Lerp(fadeA, fadeB, transition);
         }
         else if (timeValue >= 23.75 & timeValue < 24 && !isInPhase3)
         {
-            isInPhase3 = true;
+            isInPhase1 = false;
             isInPhase2 = false;
+            isInPhase3 = true;
+            isInPhase4 = false;
 
-            StartCoroutine(fadeOut(p1UI));
-            StartCoroutine(fadeOut(p2UI));
+            StartCoroutine(fadeOut());
             //transition += Time.deltaTime / 2;
             //p1UI.color = Color.Lerp(fadeA, fadeB, transition);
             //p2UI.color = Color.Lerp(fadeA, fadeB, transition);
         }
         else if (timeValue >= 0 & timeValue < 0.25 && !isInPhase4)
         {
-
-            isInPhase4 = true;
+            isInPhase1 = false;
+            isInPhase2 = false;
             isInPhase3 = false;
+            isInPhase4 = true;
 
-            StartCoroutine(fadeIn(p1UI));
-            StartCoroutine(fadeIn(p2UI));
+            StartCoroutine(fadeIn());
             //transition -= Time.deltaTime / 2;
             //p1UI.color = Color.Lerp(fadeA, fadeB, transition);
             //p2UI.color = Color.Lerp(fadeA, fadeB, transition);
 
-            PanelVillagerKillP1.SetActive(false);
-            PanelVillagerKillP2.SetActive(false);
+            //PanelVillagerKillP1.SetActive(false);
+            //PanelVillagerKillP2.SetActive(false);
+
+            StartCoroutine(fadeOutPanel());
         }
     }
 
-    public IEnumerator fadeOut(Image imageFondu)
+    public IEnumerator fadeOut()
     {
 
         //yield return new WaitForSeconds(4f);
         //Debug.Log("FadeOut");
-        while (imageFondu.color.a < 1)
+
+        //Debug.Log("FadeOut" + isInFade);
+        yield return new WaitUntil(() => !isInFade);
+        isInFade = true;
+        while (p1UI.color.a < 1 || p2UI.color.a < 1)
         {
-            imageFondu.color = new Color(imageFondu.color.r, imageFondu.color.g, imageFondu.color.b, imageFondu.color.a + 0.01f);
+            p1UI.color = new Color(p1UI.color.r, p1UI.color.g, p1UI.color.b, p1UI.color.a + 0.01f);
+            p2UI.color = new Color(p2UI.color.r, p2UI.color.g, p2UI.color.b, p2UI.color.a + 0.01f);
             yield return new WaitForSeconds(0.01f);
         }
+        isInFade = false;
+        Debug.Log("FadeOut" + isInFade);
     }
 
-    public IEnumerator fadeOutPanel(GameObject panel)
+    public IEnumerator fadeOutPanel()
     {
 
         //yield return new WaitForSeconds(4f);
         //Debug.Log("FadeOut");
-        while (panel.GetComponent<CanvasRenderer>().GetAlpha() < 1)
+        while (PanelVillagerKillP1.GetComponent<CanvasRenderer>().GetAlpha() < 1 || PanelVillagerKillP2.GetComponent<CanvasRenderer>().GetAlpha() < 1)
         {
-            panel.GetComponent<CanvasRenderer>().SetAlpha(panel.GetComponent<CanvasRenderer>().GetAlpha() + 0.01f);
+            PanelVillagerKillP1.GetComponent<CanvasRenderer>().SetAlpha(PanelVillagerKillP1.GetComponent<CanvasRenderer>().GetAlpha() - 0.01f);
+            PanelVillagerKillP2.GetComponent<CanvasRenderer>().SetAlpha(PanelVillagerKillP2.GetComponent<CanvasRenderer>().GetAlpha() - 0.01f);
             yield return new WaitForSeconds(0.01f);
         }
-        panel.SetActive(false);
-        panel.GetComponent<CanvasRenderer>().SetAlpha(0);
-        panel.SetActive(true);
+        PanelVillagerKillP1.SetActive(false);
+        PanelVillagerKillP1.GetComponent<CanvasRenderer>().SetAlpha(1);
+
+        PanelVillagerKillP2.SetActive(false);
+        PanelVillagerKillP2.GetComponent<CanvasRenderer>().SetAlpha(1);
     }
 
-    public IEnumerator fadeIn(Image imageFondu)
+    public IEnumerator fadeIn()
     {
 
         //yield return new WaitForSeconds(4f);
-        //Debug.Log("FadeOut");
-        while (imageFondu.color.a > 0)
+        //Debug.Log("fadeIn" + isInFade);
+
+        yield return new WaitUntil(() => !isInFade);
+
+        isInFade = true;
+        while (p1UI.color.a > 0 || p2UI.color.a > 0)
         {
-            imageFondu.color = new Color(imageFondu.color.r, imageFondu.color.g, imageFondu.color.b, imageFondu.color.a - 0.01f);
+            p1UI.color = new Color(p1UI.color.r, p1UI.color.g, p1UI.color.b, p1UI.color.a - 0.01f);
+            p2UI.color = new Color(p2UI.color.r, p2UI.color.g, p2UI.color.b, p2UI.color.a - 0.01f);
             yield return new WaitForSeconds(0.01f);
         }
+        isInFade = false;
+        Debug.Log("fadeIn" + isInFade);
     }
 
 }
