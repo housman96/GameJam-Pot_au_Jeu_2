@@ -236,15 +236,7 @@ public class gameManager : MonoBehaviour
 
     public IEnumerator morning()
     {
-        AudioSource listener = gameObject.AddComponent<AudioSource>();
-        listener.playOnAwake = false;
-        listener.clip = morningClip;
-        listener.loop = false;
-        listener.volume = 0.4f;
-        listener.Play();
-        yield return new WaitUntil(() => !listener.isPlaying);
-        Destroy(listener);
-        Debug.Log("test0");
+        Debug.Log("test0" + scoreP1 + " " + scoreP2);
         if (scoreP1 == 3)
         {
             Debug.Log("test1");
@@ -257,6 +249,14 @@ public class gameManager : MonoBehaviour
             isJ1Winner = false;
             SceneManager.LoadScene("GameOver");
         }
+        AudioSource listener = gameObject.AddComponent<AudioSource>();
+        listener.playOnAwake = false;
+        listener.clip = morningClip;
+        listener.loop = false;
+        listener.volume = 0.4f;
+        listener.Play();
+        yield return new WaitUntil(() => !listener.isPlaying);
+        Destroy(listener);
     }
 
     public void killVillager(GameObject player, GameObject villager)

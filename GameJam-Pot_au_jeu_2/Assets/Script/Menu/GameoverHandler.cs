@@ -26,6 +26,8 @@ public class GameoverHandler : MonoBehaviour
             txtJ1.SetActive(false);
             txtJ2.SetActive(true);
         }
+
+        DestroyImmediate(FindObjectOfType<gameManager>().gameObject);
     }
 
     public void onClickNewGame()
