@@ -59,7 +59,9 @@ public class Fuite : MonoBehaviour
 
     public IEnumerator fadeOut()
     {
-        //yield return new WaitForSeconds(0.5f);
+
+        //yield return new WaitForSeconds(4f);
+        //Debug.Log("FadeOut");
         while (imageFondu.color.a < 1)
         {
             imageFondu.color = new Color(imageFondu.color.r, imageFondu.color.g, imageFondu.color.b, imageFondu.color.a + 0.01f);

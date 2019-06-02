@@ -9,13 +9,14 @@ public class GameoverHandler : MonoBehaviour
     public GameObject txtJ2;
 
     // TODO : change bool
-    private bool isJ1Winner = true;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        if (isJ1Winner)
+
+
+        if (gameManager.Instance.isJ1Winner)
         {
             txtJ1.SetActive(true);
             txtJ2.SetActive(false);
@@ -25,6 +26,8 @@ public class GameoverHandler : MonoBehaviour
             txtJ1.SetActive(false);
             txtJ2.SetActive(true);
         }
+
+        DestroyImmediate(FindObjectOfType<gameManager>().gameObject);
     }
 
     public void onClickNewGame()

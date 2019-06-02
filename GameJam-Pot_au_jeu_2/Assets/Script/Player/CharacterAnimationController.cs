@@ -106,7 +106,7 @@ public class CharacterAnimationController : MonoBehaviour
                     }
 
                     //movement
-                    if (!animator.GetBool("sword") && !animator.GetBool("bow"))
+                    if (!animator.GetBool("sword") && !animator.GetBool("bow") && !animator.GetBool("isInLookAt"))
                     {
                         animator.SetBool("isMoving", isMoving);
                         animator.SetFloat("XSpeed", input.x);
@@ -114,6 +114,14 @@ public class CharacterAnimationController : MonoBehaviour
                     }
 
                     //si on est dans une animation d'attaque on désactive le boolean qui declenche l'animation d'attaque
+                    if (animator.GetCurrentAnimatorStateInfo(0).IsTag("LookAt"))
+                    {
+                        animator.SetBool("isInLookAt", false);
+                    }
+                    if (animator.GetCurrentAnimatorStateInfo(0).IsTag("handsUp"))
+                    {
+                        animator.SetBool("HandsUp", false);
+                    }
                     if (animator.GetCurrentAnimatorStateInfo(0).IsTag("handsUp"))
                     {
                         animator.SetBool("HandsUp", false);
@@ -246,6 +254,10 @@ public class CharacterAnimationController : MonoBehaviour
     //on fait regarder le personnage d'un côté
     public void lookAt(Sens sens)
     {
+        if (animators == null)
+        {
+            return;
+        }
         foreach (Animator animator in animators)
         {
             if (animator.runtimeAnimatorController != null)
@@ -271,7 +283,7 @@ public class CharacterAnimationController : MonoBehaviour
                 }
 
 
-                animator.SetBool("isMoving", false);
+                animator.SetBool("isInLookAt", true);
                 animator.SetFloat("XSpeed", Xspeed);
                 animator.SetFloat("YSpeed", Yspeed);
             }

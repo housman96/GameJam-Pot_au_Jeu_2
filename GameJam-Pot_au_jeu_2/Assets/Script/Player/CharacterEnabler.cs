@@ -130,6 +130,7 @@ public class CharacterEnabler : MonoBehaviour
             nose.GetComponent<Animator>().runtimeAnimatorController = null;
         }
 
+        GetComponent<CharacterAnimationController>().lookAt(Sens.Down);
 
         body.GetComponent<SpriteRenderer>().sortingOrder = 0;
         eyes.GetComponent<SpriteRenderer>().sortingOrder = 1;
